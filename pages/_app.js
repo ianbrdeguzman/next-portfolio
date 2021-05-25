@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import 'tailwindcss/tailwind.css';
+import { ThemeProvider } from '../components/context/themeContext';
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+    return (
+        <ThemeProvider>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </ThemeProvider>
+    );
 }
 
-export default MyApp
+export default MyApp;
