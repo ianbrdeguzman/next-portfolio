@@ -7,8 +7,9 @@ module.exports = {
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         minHeight: {
-            sm: 'calc(100vh - 128px)',
-            md: 'calc(100vh - 160px)',
+            sm: 'calc(100vh - 72px)',
+            md: 'calc(100vh - 72px)',
+            screen: '100vh',
         },
         screens: {
             xs: '320px',
