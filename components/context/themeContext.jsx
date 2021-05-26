@@ -1,4 +1,4 @@
-import React, { createContext, useState, useReducer, useEffect } from 'react';
+import React, { createContext, useReducer } from 'react';
 import { TOGGLE_THEME } from './themeActionTypes';
 import themeReducer from './themeReducer';
 

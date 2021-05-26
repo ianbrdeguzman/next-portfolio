@@ -2,23 +2,12 @@ import { useContext } from 'react';
 import { ThemeContext } from './context/themeContext';
 import Link from 'next/link';
 
-export const getStaticProps = async () => {
-    const res = await fetch(
-        'https://next-portfolio-seven-pi.vercel.app/api/header'
-    );
-    const data = await res.json();
-
-    return {
-        props: { data },
-    };
-};
-
-const Header = ({ data }) => {
+const Header = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
         <header>
-            <div className='p-4 md:px-8 dark:bg-gray-900 text-gray-900 flex justify-end align-center'>
+            <nav className='p-4 md:px-8 dark:bg-gray-900 text-gray-900 flex justify-end align-center'>
                 <ul className='h-full align-center dark:text-white hidden md:flex'>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
                         <Link href='#about'>about</Link>
@@ -39,7 +28,7 @@ const Header = ({ data }) => {
                 >
                     {theme === 'light' ? '🌑' : '🌞'}
                 </button>
-            </div>
+            </nav>
         </header>
     );
 };
