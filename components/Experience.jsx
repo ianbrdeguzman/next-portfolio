@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-const Experience = () => {
+const Experience = ({ data: { enbridge, samsung, accenture } }) => {
     const [selected, setSelected] = useState('e');
     return (
         <section
@@ -55,124 +55,85 @@ const Experience = () => {
                         {selected === 'e' ? (
                             <article>
                                 <h3 className='text-xl md:text-2xl font-normal'>
-                                    Service Desk @{' '}
+                                    {enbridge.role} @{' '}
                                     <Link href='https://www.enbridge.com/'>
                                         <a className='text-blue-700'>
                                             Enbridge
                                         </a>
                                     </Link>
                                 </h3>
-                                <p className='md:text-xl'>Toronto, Canada</p>
+                                <p className='md:text-xl'>
+                                    {enbridge.city}, {enbridge.country}
+                                </p>
                                 <p className='mb-4 md:text-xl'>
-                                    December 2020 - Present
+                                    {enbridge.fromDate} - {enbridge.toDate}
                                 </p>
                                 <ul className='md:text-xl list-square list-inside list-blue-700'>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            Provide Service Desk technical
-                                            support to users either via phone or
-                                            email as required.
-                                        </span>
-                                    </li>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            Provide advanced troubleshooting for
-                                            all types of technical inquiries,
-                                            service requests, and issues
-                                            involving computers, network,
-                                            smartphones/tablets, enterprise
-                                            applications/systems.
-                                        </span>
-                                    </li>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            Develop, implement, and/or
-                                            participate in the preparation
-                                            knowledge base articles and/or
-                                            documentation for Service Desk use;
-                                            make recommendations for
-                                            improvements.
-                                        </span>
-                                    </li>
+                                    {enbridge.task.map((item) => {
+                                        return (
+                                            <li className='text-blue-700 mb-4'>
+                                                <span className='text-black dark:text-white'>
+                                                    {item}
+                                                </span>
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </article>
                         ) : selected === 's' ? (
                             <article>
                                 <h3 className='text-xl md:text-2xl font-normal'>
-                                    Process Improvement Systems Analyst @{' '}
-                                    <Link href='https://www.samsung.com/au/'>
+                                    {samsung.role} @{' '}
+                                    <Link href='https://www.enbridge.com/'>
                                         <a className='text-blue-700'>
-                                            Samsung Electronics
+                                            Enbridge
                                         </a>
                                     </Link>
                                 </h3>
-                                <p className='md:text-xl'>Sydney, Australia</p>
+                                <p className='md:text-xl'>
+                                    {samsung.city}, {samsung.country}
+                                </p>
                                 <p className='mb-4 md:text-xl'>
-                                    October 2019 - July 2020
+                                    {samsung.fromDate} - {samsung.toDate}
                                 </p>
                                 <ul className='md:text-xl list-square list-inside list-blue-700'>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            Successfully lead the Direct Payment
-                                            project (Online Booking Service
-                                            System) for Australian Consumers.
-                                        </span>
-                                    </li>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            In charge of User Acceptance Testing
-                                            on behalf of Australian subsidiary
-                                            for all ongoing system changes and
-                                            enhancements.
-                                        </span>
-                                    </li>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            Analyses business requirements and
-                                            enhance systems that would benefit
-                                            all parties.
-                                        </span>
-                                    </li>
+                                    {samsung.task.map((item) => {
+                                        return (
+                                            <li className='text-blue-700 mb-4'>
+                                                <span className='text-black dark:text-white'>
+                                                    {item}
+                                                </span>
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </article>
                         ) : (
                             <article>
                                 <h3 className='text-xl md:text-2xl font-normal'>
-                                    Senior Application Support Analyst @{' '}
-                                    <Link href='https://www.accenture.com/ph-en/about/company/philippines'>
+                                    {accenture.role} @{' '}
+                                    <Link href='https://www.enbridge.com/'>
                                         <a className='text-blue-700'>
                                             Accenture
                                         </a>
                                     </Link>
                                 </h3>
                                 <p className='md:text-xl'>
-                                    Manila, Philippines
+                                    {accenture.city}, {accenture.country}
                                 </p>
                                 <p className='mb-4 md:text-xl'>
-                                    August 2013 - February 2017
+                                    {accenture.fromDate} - {accenture.toDate}
                                 </p>
                                 <ul className='md:text-xl list-square list-inside list-blue-700'>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            Experience in providing application
-                                            support for SAP applications such as
-                                            BusinessObjects, BASIS & Security
-                                            and SAP GRC.
-                                        </span>
-                                    </li>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            Ticket creation, troubleshooting and
-                                            resolving incidents within agreed
-                                            service level.
-                                        </span>
-                                    </li>
-                                    <li className='text-blue-700 mb-4'>
-                                        <span className='text-black dark:text-white'>
-                                            Create documents and procedures for
-                                            IT knowledge base.
-                                        </span>
-                                    </li>
+                                    {accenture.task.map((item) => {
+                                        return (
+                                            <li className='text-blue-700 mb-4'>
+                                                <span className='text-black dark:text-white'>
+                                                    {item}
+                                                </span>
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </article>
                         )}

@@ -1,26 +1,25 @@
 const data = {
-    hero: {
-        text: "I'm Ian De Guzman, Industrial Engineer who went rogue. Front-end developer looking for internship, contract role or junior position.",
-    },
     about: {
-        text: 'Hi! my name is Ian De Guzman, an Industrial Engineering graduate who turned Front-End developer with the focus on building fast, clean and maintanable code.',
-        textTwo:
-            'Currently, based in Toronto, Canada. I am a self-taught, passionate, and hardworking developer looking forward to collaborate and learn from engineers who are much smarter than me while building applications that solve problems and are used by thousands.',
-        tech: [
-            ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Redux'],
-            ['Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Nextjs'],
-            [
+        text: {
+            one: 'Hi! my name is Ian De Guzman, an Industrial Engineering graduate who turned Front-End developer with the focus on building fast, clean and maintanable code.',
+            two: 'Currently, based in Toronto, Canada. I am a self-taught, passionate, and hardworking developer looking forward to collaborate and learn from engineers who are much smarter than me while building applications that solve problems and are used by thousands.',
+        },
+        skills: {
+            frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Redux'],
+            backend: ['Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Nextjs'],
+            styling: [
                 'SASS/SCSS',
                 'Styled Components',
                 'CSS Modules',
                 'Tailwind CSS',
                 'Material UI',
             ],
-            ['Vercel', 'Heroku', 'Netlify', 'Postman', 'Git / Github'],
-        ],
+            others: ['Vercel', 'Heroku', 'Netlify', 'Postman', 'Git / Github'],
+        },
     },
     experience: {
         enbridge: {
+            name: 'Enbridge',
             role: 'Service Desk',
             city: 'Toronto',
             country: 'Canada',
@@ -33,6 +32,7 @@ const data = {
             ],
         },
         samsung: {
+            name: 'Samsung Electronics',
             role: 'Process Improvement Systems Analyst',
             city: 'Sydney',
             country: 'Australia',
@@ -45,6 +45,7 @@ const data = {
             ],
         },
         accenture: {
+            name: 'Accenture',
             role: 'Senior Application Support Analyst',
             city: 'Manila',
             country: 'Philippines',

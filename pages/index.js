@@ -5,26 +5,27 @@ import Experience from '../components/Experience';
 import Contact from '../components/Contact';
 
 export const getStaticProps = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const res = await fetch(
+        'https://next-portfolio-ityt6wwzs-ianbrdeguzman.vercel.app/api/data'
+    );
     const data = await res.json();
 
     return {
         props: {
-            users: data,
+            data,
         },
     };
 };
 
-const Home = ({ users }) => {
-    console.log(users);
+const Home = ({ data: { hero, about, experience } }) => {
     return (
         <div className='dark:bg-gray-900 dark:text-white'>
             <Head>
                 <title>Ian De Guzman</title>
             </Head>
             <Hero />
-            <About />
-            <Experience />
+            <About data={about} />
+            <Experience data={experience} />
             <Contact />
         </div>
     );

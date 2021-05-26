@@ -1,4 +1,4 @@
-const About = () => {
+const About = ({ data: { tech } }) => {
     return (
         <section
             className='flex justify-center items-center min-h-screen'
@@ -34,32 +34,24 @@ const About = () => {
                         </p>
                         <div className='flex justify-between flex-wrap'>
                             <ul className='xs:flex-1 min-w-[128px]'>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript (ES6+)</li>
-                                <li>React</li>
-                                <li>Redux</li>
+                                {tech[0].map((item, i) => {
+                                    return <li key={i}>{item}</li>;
+                                })}
                             </ul>
                             <ul className='xs:flex-1 min-w-[128px]'>
-                                <li>Node.js</li>
-                                <li>Express.js</li>
-                                <li>MongoDB</li>
-                                <li>Firebase</li>
-                                <li>Nextjs</li>
+                                {tech[1].map((item, i) => {
+                                    return <li key={i}>{item}</li>;
+                                })}
                             </ul>
                             <ul className='xs:flex-1 min-w-[128px]'>
-                                <li>SASS/SCSS</li>
-                                <li>Styled Components</li>
-                                <li>CSS Modules</li>
-                                <li>TailwindCSS</li>
-                                <li>Material UI</li>
+                                {tech[2].map((item, i) => {
+                                    return <li key={i}>{item}</li>;
+                                })}
                             </ul>
                             <ul className='xs:flex-1 min-w-[128px]'>
-                                <li>Vercel</li>
-                                <li>Heroku</li>
-                                <li>Netlify</li>
-                                <li>Postman</li>
-                                <li>Git / Github</li>
+                                {tech[3].map((item, i) => {
+                                    return <li key={i}>{item}</li>;
+                                })}
                             </ul>
                         </div>
                     </div>

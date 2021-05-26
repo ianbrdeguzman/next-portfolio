@@ -19,7 +19,7 @@ const Header = () => {
                         <Link href='#'>projects</Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#'>contact</Link>
+                        <Link href='#contact'>contact</Link>
                     </li>
                 </ul>
                 <button
