@@ -2,7 +2,18 @@ import { useContext } from 'react';
 import { ThemeContext } from './context/themeContext';
 import Link from 'next/link';
 
-const Header = () => {
+export const getStaticProps = async () => {
+    const res = await fetch(
+        'https://next-portfolio-seven-pi.vercel.app/api/header'
+    );
+    const data = await res.json();
+
+    return {
+        props: { data },
+    };
+};
+
+const Header = ({ data }) => {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
@@ -16,10 +27,10 @@ const Header = () => {
                         <Link href='#exprience'>experience</Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href=''>projects</Link>
+                        <Link href='#'>projects</Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href=''>contact</Link>
+                        <Link href='#'>contact</Link>
                     </li>
                 </ul>
                 <button

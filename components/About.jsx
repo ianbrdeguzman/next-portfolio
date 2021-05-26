@@ -9,7 +9,7 @@ const About = () => {
                     <h2 className='xs:text-2xl sm:text-3xl md:text-5xl my-4'>
                         About me
                     </h2>
-                    <div className='border-t border-blue-700 absolute top-1/2 right-0 w-6/12 md:w-8/12'></div>
+                    <div className='border-t border-blue-700 absolute top-1/2 right-0 w-6/12 md:w-7/12 lg:w-8/12'></div>
                 </header>
                 <main className='text-base md:text-xl'>
                     <div>
