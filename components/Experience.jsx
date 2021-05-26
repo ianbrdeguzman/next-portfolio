@@ -58,7 +58,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                                     {enbridge.role} @{' '}
                                     <Link href='https://www.enbridge.com/'>
                                         <a className='text-blue-700'>
-                                            Enbridge
+                                            {enbridge.name}
                                         </a>
                                     </Link>
                                 </h3>
@@ -69,9 +69,12 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                                     {enbridge.fromDate} - {enbridge.toDate}
                                 </p>
                                 <ul className='md:text-xl list-square list-inside list-blue-700'>
-                                    {enbridge.task.map((item) => {
+                                    {enbridge.task.map((item, i) => {
                                         return (
-                                            <li className='text-blue-700 mb-4'>
+                                            <li
+                                                key={i}
+                                                className='text-blue-700 mb-4'
+                                            >
                                                 <span className='text-black dark:text-white'>
                                                     {item}
                                                 </span>
@@ -86,7 +89,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                                     {samsung.role} @{' '}
                                     <Link href='https://www.enbridge.com/'>
                                         <a className='text-blue-700'>
-                                            Enbridge
+                                            {samsung.name}
                                         </a>
                                     </Link>
                                 </h3>
@@ -97,9 +100,12 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                                     {samsung.fromDate} - {samsung.toDate}
                                 </p>
                                 <ul className='md:text-xl list-square list-inside list-blue-700'>
-                                    {samsung.task.map((item) => {
+                                    {samsung.task.map((item, i) => {
                                         return (
-                                            <li className='text-blue-700 mb-4'>
+                                            <li
+                                                key={i}
+                                                className='text-blue-700 mb-4'
+                                            >
                                                 <span className='text-black dark:text-white'>
                                                     {item}
                                                 </span>
@@ -114,7 +120,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                                     {accenture.role} @{' '}
                                     <Link href='https://www.enbridge.com/'>
                                         <a className='text-blue-700'>
-                                            Accenture
+                                            {accenture.name}
                                         </a>
                                     </Link>
                                 </h3>
@@ -125,9 +131,12 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                                     {accenture.fromDate} - {accenture.toDate}
                                 </p>
                                 <ul className='md:text-xl list-square list-inside list-blue-700'>
-                                    {accenture.task.map((item) => {
+                                    {accenture.task.map((item, i) => {
                                         return (
-                                            <li className='text-blue-700 mb-4'>
+                                            <li
+                                                key={i}
+                                                className='text-blue-700 mb-4'
+                                            >
                                                 <span className='text-black dark:text-white'>
                                                     {item}
                                                 </span>

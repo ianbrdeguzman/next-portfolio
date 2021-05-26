@@ -10,16 +10,24 @@ const Header = () => {
             <nav className='p-4 md:px-8 dark:bg-gray-900 text-gray-900 flex justify-end align-center'>
                 <ul className='h-full align-center dark:text-white hidden md:flex'>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#about'>about</Link>
+                        <Link href='#about'>
+                            <a>about</a>
+                        </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#exprience'>experience</Link>
+                        <Link href='#exprience'>
+                            <a>experience</a>
+                        </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#'>projects</Link>
+                        <Link href='#project'>
+                            <a>projects</a>
+                        </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#contact'>contact</Link>
+                        <Link href='#contact'>
+                            <a>contact</a>
+                        </Link>
                     </li>
                 </ul>
                 <button

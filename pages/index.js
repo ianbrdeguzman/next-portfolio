@@ -3,10 +3,11 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Experience from '../components/Experience';
 import Contact from '../components/Contact';
+import Project from '../components/Project';
 
 export const getStaticProps = async () => {
     const res = await fetch(
-        'https://next-portfolio-ityt6wwzs-ianbrdeguzman.vercel.app/api/data'
+        'https://next-portfolio-seven-pi.vercel.app/api/data'
     );
     const data = await res.json();
 
@@ -26,6 +27,7 @@ const Home = ({ data: { hero, about, experience } }) => {
             <Hero />
             <About data={about} />
             <Experience data={experience} />
+            <Project />
             <Contact />
         </div>
     );
