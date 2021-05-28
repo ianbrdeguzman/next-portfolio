@@ -6,30 +6,26 @@ import Contact from '../components/Contact';
 import Project from '../components/Project';
 import axios from 'axios';
 
-// export const getStaticProps = async () => {
-//     const { data } = await axios.get('http://localhost:3000/api/data');
+export const getStaticProps = async () => {
+    const { data } = await axios.get(
+        'https://next-portfolio-indol-one.vercel.app/api/data'
+    );
 
-//     return {
-//         props: {
-//             data,
-//         },
-//     };
-// };
+    return {
+        props: {
+            data,
+        },
+    };
+};
 
-// {
-//     data: {
-//         hero, about, experience, contact;
-//     }
-// }
-
-const Home = () => {
+const Home = ({ data: { about, experience, contact } }) => {
     return (
         <div className='dark:bg-gray-900 dark:text-white relative'>
             <Head>
                 <title>Ian De Guzman</title>
             </Head>
             <Hero />
-            <About />
+            <About data={about} />
             <Experience />
             <Project />
             <Contact />
