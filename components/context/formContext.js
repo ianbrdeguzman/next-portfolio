@@ -17,7 +17,7 @@ const FormProvider = ({ children }) => {
         dispatch({ type: 'FORM_SUBMIT_REQUEST' });
         try {
             const { data } = await axios.post(
-                'https://next-portfolio-seven-pi.vercel.app/api/submit',
+                'http://localhost:3000/api/submit',
                 {
                     name,
                     email,
