@@ -16,11 +16,14 @@ const FormProvider = ({ children }) => {
     const formSubmit = async ({ name, email, message }) => {
         dispatch({ type: 'FORM_SUBMIT_REQUEST' });
         try {
-            const { data } = await axios.post(process.env.API_SUBMIT_URL, {
-                name,
-                email,
-                message,
-            });
+            const { data } = await axios.post(
+                'https://next-portfolio-seven-pi.vercel.app/api/submit',
+                {
+                    name,
+                    email,
+                    message,
+                }
+            );
             dispatch({ type: 'FORM_SUBMIT_SUCESS', payload: data.message });
             localStorage.setItem('submit', JSON.stringify(data));
         } catch (error) {

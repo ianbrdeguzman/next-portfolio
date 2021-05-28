@@ -7,7 +7,9 @@ import Project from '../components/Project';
 import axios from 'axios';
 
 export const getStaticProps = async () => {
-    const { data } = await axios.get(process.env.API_DATA_URL);
+    const { data } = await axios.get(
+        'https://next-portfolio-seven-pi.vercel.app/api/data'
+    );
 
     return {
         props: {
