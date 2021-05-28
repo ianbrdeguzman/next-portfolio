@@ -6,27 +6,33 @@ import Contact from '../components/Contact';
 import Project from '../components/Project';
 import axios from 'axios';
 
-export const getStaticProps = async () => {
-    const { data } = await axios.get('http://localhost:3000/api/data');
+// export const getStaticProps = async () => {
+//     const { data } = await axios.get('http://localhost:3000/api/data');
 
-    return {
-        props: {
-            data,
-        },
-    };
-};
+//     return {
+//         props: {
+//             data,
+//         },
+//     };
+// };
 
-const Home = ({ data: { hero, about, experience, contact } }) => {
+// {
+//     data: {
+//         hero, about, experience, contact;
+//     }
+// }
+
+const Home = () => {
     return (
         <div className='dark:bg-gray-900 dark:text-white relative'>
             <Head>
                 <title>Ian De Guzman</title>
             </Head>
             <Hero />
-            <About data={about} />
-            <Experience data={experience} />
+            <About />
+            <Experience />
             <Project />
-            <Contact data={contact} />
+            <Contact />
         </div>
     );
 };

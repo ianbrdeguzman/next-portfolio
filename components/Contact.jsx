@@ -3,7 +3,13 @@ import { useForm } from 'react-hook-form';
 import { FormContext } from './context/formContext';
 import { CgSpinner } from 'react-icons/cg';
 
-const Contact = ({ data: { text } }) => {
+// {
+//     data: {
+//         text;
+//     }
+// }
+
+const Contact = () => {
     const { formSubmit, isLoading, success, error } = useContext(FormContext);
 
     const {
@@ -41,7 +47,12 @@ const Contact = ({ data: { text } }) => {
                         className='my-4 w-full max-w-[540px] mx-auto'
                         onSubmit={handleSubmit(handleOnSubmit)}
                     >
-                        <p className='md:text-xl text-center'>{text}</p>
+                        <p className='md:text-xl text-center'>
+                            My inbox is always open, whether you want to reach
+                            out or provide feedback on how to improve my work.
+                            Feel free to send me a message and I will try to get
+                            back to you as soon as I can. Cheers!
+                        </p>
                         <label htmlFor='name' className='py-4 md:text-xl block'>
                             Name
                         </label>
