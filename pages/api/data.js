@@ -58,6 +58,9 @@ const data = {
             ],
         },
     },
+    contact: {
+        text: 'My inbox is always open, whether you want to reach out or provide feedback on how to improve my work. Feel free to send me a message and I will try to get back to you as soon as I can. Cheers!',
+    },
 };
 
 export default (req, res) => {

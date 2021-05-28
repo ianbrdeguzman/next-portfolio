@@ -1,17 +1,17 @@
 const themeReducer = (state, action) => {
     switch (action.type) {
-        case FORM_SUBMIT_REQUEST:
+        case 'FORM_SUBMIT_REQUEST':
             return {
                 ...state,
                 isLoading: true,
             };
-        case FORM_SUBMIT_SUCESS:
+        case 'FORM_SUBMIT_SUCESS':
             return {
                 ...state,
                 isLoading: false,
-                message: action.payload,
+                success: action.payload,
             };
-        case FORM_SUBMIT_FAIL:
+        case 'FORM_SUBMIT_FAIL':
             return {
                 ...state,
                 isLoading: false,

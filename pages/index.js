@@ -4,12 +4,10 @@ import About from '../components/About';
 import Experience from '../components/Experience';
 import Contact from '../components/Contact';
 import Project from '../components/Project';
+import axios from 'axios';
 
 export const getStaticProps = async () => {
-    const res = await fetch(
-        'https://next-portfolio-seven-pi.vercel.app/api/data'
-    );
-    const data = await res.json();
+    const { data } = await axios.get(process.env.API_DATA_URL);
 
     return {
         props: {
@@ -18,7 +16,7 @@ export const getStaticProps = async () => {
     };
 };
 
-const Home = ({ data: { hero, about, experience } }) => {
+const Home = ({ data: { hero, about, experience, contact } }) => {
     return (
         <div className='dark:bg-gray-900 dark:text-white relative'>
             <Head>
@@ -28,7 +26,7 @@ const Home = ({ data: { hero, about, experience } }) => {
             <About data={about} />
             <Experience data={experience} />
             <Project />
-            <Contact />
+            <Contact data={contact} />
         </div>
     );
 };
