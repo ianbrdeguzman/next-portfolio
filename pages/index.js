@@ -20,7 +20,7 @@ export const getStaticProps = async () => {
 
 const Home = ({ data: { hero, about, experience } }) => {
     return (
-        <div className='dark:bg-gray-900 dark:text-white'>
+        <div className='dark:bg-gray-900 dark:text-white relative'>
             <Head>
                 <title>Ian De Guzman</title>
             </Head>
