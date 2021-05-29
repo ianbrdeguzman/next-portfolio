@@ -1,6 +1,27 @@
 import { createTransport } from 'nodemailer';
+import Cors from 'cors';
+
+const initMiddleware = (middleware) => {
+    return (req, res) =>
+        new Promise((resolve, reject) => {
+            middleware(req, res, (result) => {
+                if (result instanceof Error) {
+                    return reject(result);
+                }
+                return resolve(result);
+            });
+        });
+};
+
+const cors = initMiddleware(
+    Cors({
+        methods: ['GET', 'POST'],
+    })
+);
 
 export default async (req, res) => {
+    await cors(req, res);
+
     if (req.method === 'POST') {
         const { name, email, message } = req.body;
 
@@ -29,6 +50,7 @@ export default async (req, res) => {
             });
             res.end();
         } catch (error) {
+            console.log(error);
             res.status(500).send({
                 message: 'Oops! Something went wrong.',
             });
