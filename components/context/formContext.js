@@ -25,7 +25,6 @@ const FormProvider = ({ children }) => {
                 }
             );
             dispatch({ type: 'FORM_SUBMIT_SUCESS', payload: data.message });
-            localStorage.setItem('submit', JSON.stringify(data));
         } catch (error) {
             dispatch({
                 type: 'FORM_SUBMIT_FAIL',
