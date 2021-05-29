@@ -1,10 +1,3 @@
-// {
-//     data: {
-//         text: { one, two },
-//         skills: { frontend, backend, styling, others },
-//     },
-// }
-
 const About = ({
     data: {
         text: { one, two },

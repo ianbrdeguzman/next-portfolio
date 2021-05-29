@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from './context/themeContext';
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 
 const Header = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
@@ -10,22 +10,22 @@ const Header = () => {
             <nav className='p-4 md:px-8 dark:bg-gray-900 text-gray-900 flex justify-end align-center'>
                 <ul className='h-full align-center dark:text-white hidden md:flex'>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#about'>
+                        <Link to='about' smooth={true} duration={1000}>
                             <a>about</a>
                         </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#exprience'>
+                        <Link to='exprience' smooth={true} duration={1000}>
                             <a>experience</a>
                         </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#project'>
+                        <Link to='project' smooth={true} duration={1000}>
                             <a>projects</a>
                         </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link href='#contact'>
+                        <Link to='contact' smooth={true} duration={1000}>
                             <a>contact</a>
                         </Link>
                     </li>
