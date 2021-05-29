@@ -26,7 +26,6 @@ const FormProvider = ({ children }) => {
             );
             dispatch({ type: 'FORM_SUBMIT_SUCESS', payload: data.message });
         } catch (error) {
-            console.log(error);
             dispatch({
                 type: 'FORM_SUBMIT_FAIL',
                 payload: error.response

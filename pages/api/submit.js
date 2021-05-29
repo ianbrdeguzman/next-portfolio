@@ -50,12 +50,9 @@ export default async (req, res) => {
             });
             res.end();
         } catch (error) {
-            res.status(500).send(
-                error
-                //     {
-                //     message: 'Oops! Something went wrong.',
-                // }
-            );
+            res.status(500).send({
+                message: 'Oops! Something went wrong.',
+            });
         }
     } else {
         res.status(500).send({ message: 'Not a post request.' });
