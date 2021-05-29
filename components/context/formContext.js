@@ -17,7 +17,7 @@ const FormProvider = ({ children }) => {
         dispatch({ type: 'FORM_SUBMIT_REQUEST' });
         try {
             const { data } = await axios.post(
-                'http://localhost:3000/api/submit',
+                'https://next-portfolio-indol-one.vercel.app/api/submit',
                 {
                     name,
                     email,

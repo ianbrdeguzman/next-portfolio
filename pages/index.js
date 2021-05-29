@@ -26,9 +26,9 @@ const Home = ({ data: { about, experience, contact } }) => {
             </Head>
             <Hero />
             <About data={about} />
-            <Experience />
+            <Experience data={experience} />
             <Project />
-            <Contact />
+            <Contact data={contact} />
         </div>
     );
 };

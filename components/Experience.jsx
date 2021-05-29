@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-// {
-//     data: {
-//         enbridge, samsung, accenture;
-//     }
-// }
-
-const Experience = () => {
+const Experience = ({ data: { enbridge, samsung, accenture } }) => {
     const [selected, setSelected] = useState('e');
     return (
         <section
@@ -21,7 +15,7 @@ const Experience = () => {
                         Experience
                     </h1>
                 </header>
-                {/* <main className='my-4 md:flex'>
+                <main className='my-4 md:flex'>
                     <div className='flex justify-around text-gray-500 md:flex-col md:mr-4 min-w-[120px] self-start'>
                         <button
                             value='e'
@@ -153,7 +147,7 @@ const Experience = () => {
                             </article>
                         )}
                     </div>
-                </main> */}
+                </main>
             </div>
         </section>
     );
