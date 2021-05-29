@@ -1,25 +1,31 @@
-import { FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
-import Link from 'next/link';
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const Footer = () => {
     return (
-        <div className='dark:bg-gray-900 p-4 text-center text-2xl text-white'>
-            <div className='flex justify-center'>
-                <Link href='mailto:ianbrdeguzman@gmail.com'>
-                    <a className='dark:hover:text-blue-700 transition hover:animate-bounce'>
-                        <FaRegEnvelope />
-                    </a>
-                </Link>
-                <Link href='/'>
-                    <a className='mx-8 dark:hover:text-blue-700 transition hover:animate-bounce'>
-                        <FaLinkedin />
-                    </a>
-                </Link>
-                <Link href='/'>
-                    <a className='dark:hover:text-blue-700 transition hover:animate-bounce'>
-                        <FaGithub />
-                    </a>
-                </Link>
+        <div className='dark:bg-gray-900 p-4 text-center text-2xl dark:text-white'>
+            <div className='flex justify-center py-4'>
+                <a
+                    href='mailto:ianbrdeguzman@gmail.com'
+                    target='_blank'
+                    className='hover:text-blue-700 dark:hover:text-blue-700 transition hover:animate-bounce'
+                >
+                    <FiMail />
+                </a>
+
+                <a
+                    href='https://www.linkedin.com/in/ian-benedict-de-guzman-377583139/'
+                    target='_blank'
+                    className='mx-8 hover:text-blue-700 dark:hover:text-blue-700 transition hover:animate-bounce'
+                >
+                    <FiLinkedin />
+                </a>
+                <a
+                    href='https://github.com/ianbrdeguzman'
+                    target='_blank'
+                    className='hover:text-blue-700 dark:hover:text-blue-700 transition hover:animate-bounce'
+                >
+                    <FiGithub />
+                </a>
             </div>
         </div>
     );

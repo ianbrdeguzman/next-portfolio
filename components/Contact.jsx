@@ -19,7 +19,7 @@ const Contact = ({ data: { text } }) => {
     return (
         <section
             id='contact'
-            className='flex justify-center items-center min-h-screen'
+            className='flex justify-center items-center min-h-contact mt-4 md:mt-0'
         >
             <div className='w-4/5 max-w-[900px] font-thin'>
                 <header className='flex relative w-full justify-end items-align'>
@@ -117,7 +117,7 @@ const Contact = ({ data: { text } }) => {
                             )}
                             <button
                                 type='submit'
-                                className='my-4 py-1 px-2 md:text-xl dark:text-white font-thin border-2 border-blue-700 rounded dark:border-blue-700 focus:outline-none focus:ring-2 focus-ring-blue-700 hover:text-white hover:bg-blue-700 transition'
+                                className='my-4 py-1 px-2 md:text-xl dark:text-white font-thin border-2 border-blue-700 rounded dark:border-blue-700 focus:outline-none focus:ring-2 focus-ring-blue-700 hover:bg-blue-700 hover:bg-opacity-10 transition'
                             >
                                 Send
                             </button>

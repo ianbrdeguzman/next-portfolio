@@ -6,27 +6,47 @@ const Header = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
-        <header>
+        <header id='header'>
             <nav className='p-4 md:px-8 dark:bg-gray-900 text-gray-900 flex justify-end align-center'>
                 <ul className='h-full align-center dark:text-white hidden md:flex'>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link to='about' smooth={true} duration={1000}>
-                            <a>about</a>
+                        <Link
+                            to='about'
+                            smooth={true}
+                            duration={1000}
+                            className='cursor-pointer'
+                        >
+                            about
                         </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link to='exprience' smooth={true} duration={1000}>
-                            <a>experience</a>
+                        <Link
+                            to='exprience'
+                            smooth={true}
+                            duration={1000}
+                            className='cursor-pointer'
+                        >
+                            experience
                         </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link to='project' smooth={true} duration={1000}>
-                            <a>projects</a>
+                        <Link
+                            to='project'
+                            smooth={true}
+                            duration={1000}
+                            className='cursor-pointer'
+                        >
+                            projects
                         </Link>
                     </li>
                     <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
-                        <Link to='contact' smooth={true} duration={1000}>
-                            <a>contact</a>
+                        <Link
+                            to='contact'
+                            smooth={true}
+                            duration={1000}
+                            className='cursor-pointer'
+                        >
+                            contact
                         </Link>
                     </li>
                 </ul>

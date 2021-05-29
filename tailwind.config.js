@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         minHeight: {
             sm: 'calc(100vh - 72px)',
-            contact: 'calc(100vh - 56px)',
+            contact: 'calc(100vh - 88px)',
             screen: '100vh',
         },
         screens: {
