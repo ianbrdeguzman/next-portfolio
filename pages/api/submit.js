@@ -26,10 +26,11 @@ export default async (req, res) => {
         const { name, email, message } = req.body;
 
         const transporter = createTransport({
-            service: 'gmail',
+            host: 'smtp.gmail.com',
+            port: 587,
             auth: {
                 user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
+                pass: process.env.GMAIL_APP_PASS,
             },
         });
 
