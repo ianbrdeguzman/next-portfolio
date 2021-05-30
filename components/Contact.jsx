@@ -3,24 +3,18 @@ import { useForm } from 'react-hook-form';
 import { FormContext } from './context/formContext';
 import { CgSpinner } from 'react-icons/cg';
 
-// {
-//     data: {
-//         text;
-//     }
-// }
-
-const Contact = () => {
+const Contact = ({ data: { text } }) => {
     const { formSubmit, isLoading, success, error } = useContext(FormContext);
 
-    // const {
-    //     register,
-    //     handleSubmit,
-    //     formState: { errors },
-    // } = useForm();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
 
-    // const handleOnSubmit = (data) => {
-    //     formSubmit(data);
-    // };
+    const handleOnSubmit = (data) => {
+        formSubmit(data);
+    };
 
     return (
         <section
@@ -34,7 +28,7 @@ const Contact = () => {
                         Contact me
                     </h1>
                 </header>
-                {/* {isLoading ? (
+                {isLoading ? (
                     <div className='flex justify-center animate-spin'>
                         <CgSpinner size={32} />
                     </div>
@@ -129,7 +123,7 @@ const Contact = () => {
                             </button>
                         </div>
                     </form>
-                )} */}
+                )}
             </div>
         </section>
     );

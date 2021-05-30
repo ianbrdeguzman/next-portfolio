@@ -6,25 +6,19 @@ import Project from '../components/Project';
 import axios from 'axios';
 import { Link } from 'react-scroll';
 
-// export const getStaticProps = async () => {
-//     const { data } = await axios.get(
-//         'https://next-portfolio-indol-one.vercel.app/api/data'
-//     );
+export const getStaticProps = async () => {
+    const { data } = await axios.get(
+        'https://next-portfolio-indol-one.vercel.app/api/data'
+    );
 
-//     return {
-//         props: {
-//             data,
-//         },
-//     };
-// };
+    return {
+        props: {
+            data,
+        },
+    };
+};
 
-// {
-//     data: {
-//         about, experience, projects, contact;
-//     }
-// }
-
-const Home = () => {
+const Home = ({ data: { about, experience, projects, contact } }) => {
     return (
         <div className='dark:bg-gray-900 dark:text-gray-200 relative'>
             <Link
@@ -38,10 +32,10 @@ const Home = () => {
                 </button>
             </Link>
             <Hero />
-            <About />
-            <Experience />
-            <Project />
-            <Contact />
+            <About data={about} />
+            <Experience data={experience} />
+            <Project data={projects} />
+            <Contact data={contact} />
         </div>
     );
 };
