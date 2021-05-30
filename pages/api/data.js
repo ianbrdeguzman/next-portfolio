@@ -20,14 +20,14 @@ const data = {
     experience: {
         enbridge: {
             name: 'Enbridge',
-            role: 'Service Desk',
+            role: 'Service Desk Analyst',
             city: 'Toronto',
             country: 'Canada',
             fromDate: 'December 2020',
             toDate: 'Present',
             task: [
                 'Provide Service Desk technical support to users either via phone or email as required.',
-                'Provide advanced troubleshooting for all types of technical inquiries, service requests, and issues involving computers, network, smartphones/tablets, enterprise applications/systems.',
+                'Provide troubleshooting for all types of technical inquiries, service requests, and issues involving computers, network, smartphones/tablets, enterprise applications/systems.',
                 'Develop, implement, and/or participate in the preparation knowledge base articles and/or documentation for Service Desk use; make recommendations for improvements.',
             ],
         },
@@ -60,6 +60,7 @@ const data = {
     },
     projects: [
         {
+            id: 1,
             name: 'Portfolio v1',
             description:
                 'Version 1 of my portfolio. Using Nextjs react framework. Includes TailwindCSS dark mode theme toggle, api routes for data fetching and form submission.',
@@ -77,6 +78,7 @@ const data = {
             },
         },
         {
+            id: 2,
             name: 'Amazon Clone',
             description:
                 'A full stack Amazon clone MERN App, includes image carousel, product page, cart page and checkout steps with paypal checkout. User login, registration and ability to view order history.',
@@ -100,6 +102,7 @@ const data = {
             },
         },
         {
+            id: 3,
             name: 'Todo App',
             description:
                 'This project was a challenge from Frontend Mentor, it include ability to create, update, filter, delete todos. Has light and dark theme mode. The first project I worked with Redux, Nodejs, Expressjs and MongoDB Atlas. Learned alot with this simple app.',
@@ -123,6 +126,7 @@ const data = {
             },
         },
         {
+            id: 4,
             name: 'Youtube Clone',
             description:
                 'A Youtube clone, powered by Youtube API. Features includes paginated homepage, skeleton loading, search videos & channels, embeded video player. Firebase authorization. Ability to subscibe, comment and view liked videos and subscribed channels.',
@@ -150,6 +154,7 @@ const data = {
             },
         },
         {
+            id: 5,
             name: 'Covid-19 Tracker',
             description:
                 'A Covid-19 tracker that shows todays covid cases, recovered and deaths around the world. Shows world map and affected countries, history of cases within the last 90 days.',
@@ -172,6 +177,7 @@ const data = {
             },
         },
         {
+            id: 6,
             name: 'Designo Client',
             description:
                 'A Frontend Mentor challenge. A multipage fictitious client website. This was my first big project using Styled Components.',

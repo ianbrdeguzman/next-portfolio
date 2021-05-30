@@ -7,9 +7,9 @@ const Header = () => {
 
     return (
         <header id='header'>
-            <nav className='p-4 md:px-8 dark:bg-gray-900 text-gray-900 flex justify-end align-center'>
-                <ul className='h-full align-center dark:text-white hidden md:flex'>
-                    <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
+            <nav className='p-4 md:px-8 dark:bg-gray-900 flex justify-end align-center'>
+                <ul className='h-full align-center dark:text-gray-200 hidden md:flex'>
+                    <li className='mr-4 mt-2 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 transition'>
                         <Link
                             to='about'
                             smooth={true}
@@ -19,7 +19,7 @@ const Header = () => {
                             about
                         </Link>
                     </li>
-                    <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
+                    <li className='mr-4 mt-2 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 transition'>
                         <Link
                             to='exprience'
                             smooth={true}
@@ -29,7 +29,7 @@ const Header = () => {
                             experience
                         </Link>
                     </li>
-                    <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
+                    <li className='mr-4 mt-2 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 transition'>
                         <Link
                             to='project'
                             smooth={true}
@@ -39,7 +39,7 @@ const Header = () => {
                             projects
                         </Link>
                     </li>
-                    <li className='mr-4 mt-2 hover:border-b-2 hover:border-blue-700 transition duration-500'>
+                    <li className='mr-4 mt-2 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 transition'>
                         <Link
                             to='contact'
                             smooth={true}

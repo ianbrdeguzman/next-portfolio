@@ -1,7 +1,10 @@
+import { useRouter } from 'next/router';
 import { FiGithub } from 'react-icons/fi';
 import { MdOpenInNew } from 'react-icons/md';
 
 const Project = ({ data: projects }) => {
+    const router = useRouter();
+
     return (
         <section
             id='project'
