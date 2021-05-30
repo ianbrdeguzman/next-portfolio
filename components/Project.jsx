@@ -26,7 +26,7 @@ const Project = () => {
                                     <a
                                         href='http://google.com'
                                         target='_blank'
-                                        className='text-blue-700'
+                                        className='text-black hover:text-blue-700 dark:text-blue-700 dark:hover:text-white transition'
                                     >
                                         <FiGithub size={24} />
                                     </a>
@@ -62,7 +62,7 @@ const Project = () => {
                                     <a
                                         href='http://google.com'
                                         target='_blank'
-                                        className='text-blue-700'
+                                        className='text-black hover:text-blue-700 dark:text-blue-700 dark:hover:text-white transition'
                                     >
                                         <MdOpenInNew size={24} />
                                     </a>
