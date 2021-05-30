@@ -42,13 +42,12 @@
 //     }
 // };
 
-// const ProjectDetails = ({ project }) => {
-//     console.log(project);
-//     return (
-//         <div>
-//             <h1>Project Item</h1>
-//         </div>
-//     );
-// };
+const ProjectDetails = () => {
+    return (
+        <div>
+            <h1>Project Item</h1>
+        </div>
+    );
+};
 
-// export default ProjectDetails;
+export default ProjectDetails;
