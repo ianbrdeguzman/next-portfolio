@@ -1,9 +1,10 @@
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { FormContext } from './context/formContext';
 import { CgSpinner } from 'react-icons/cg';
 
 const Contact = ({ data: { text } }) => {
+    const contactRef = useRef();
     const { formSubmit, isLoading, success, error } = useContext(FormContext);
 
     const {
@@ -19,7 +20,7 @@ const Contact = ({ data: { text } }) => {
     return (
         <section
             id='contact'
-            className='flex justify-center items-center min-h-contact mt-4 md:mt-0'
+            className='flex justify-center items-center min-h-md mt-4 md:mt-0'
         >
             <div className='w-4/5 max-w-[900px] font-thin'>
                 <header className='flex relative w-full justify-end items-align'>

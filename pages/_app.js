@@ -4,15 +4,26 @@ import { ThemeProvider } from '../components/context/themeContext';
 import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {
-    return (
-        <ThemeProvider>
-            <FormProvider>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
-            </FormProvider>
-        </ThemeProvider>
-    );
+    switch (Component.name) {
+        case 'ProjectDetails':
+            return (
+                <ThemeProvider>
+                    <FormProvider>
+                        <Component {...pageProps} />
+                    </FormProvider>
+                </ThemeProvider>
+            );
+        default:
+            return (
+                <ThemeProvider>
+                    <FormProvider>
+                        <Layout>
+                            <Component {...pageProps} />
+                        </Layout>
+                    </FormProvider>
+                </ThemeProvider>
+            );
+    }
 }
 
 export default MyApp;

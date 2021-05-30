@@ -122,7 +122,7 @@ const data = {
             repo: 'https://github.com/ianbrdeguzman/mern-todo-app',
             image: {
                 desktop: '/todo-app-desktop.png',
-                mobile: '/atodo-app-mobile.png',
+                mobile: '/todo-app-mobile.png',
             },
         },
         {

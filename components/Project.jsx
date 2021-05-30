@@ -19,13 +19,17 @@ const Project = ({ data: projects }) => {
                 </header>
                 <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
                     {projects.map(
-                        (
-                            { name, description, technologies, repo, demo },
-                            i
-                        ) => {
+                        ({
+                            id,
+                            name,
+                            description,
+                            technologies,
+                            repo,
+                            demo,
+                        }) => {
                             return (
                                 <div
-                                    key={i}
+                                    key={id}
                                     className='border border-blue-700 dark:border-none dark:bg-blue-700 dark:bg-opacity-10 rounded p-4 min-h-[300px] flex flex-col'
                                 >
                                     <header className='flex justify-end'>
@@ -37,7 +41,12 @@ const Project = ({ data: projects }) => {
                                             <FiGithub size={24} />
                                         </a>
                                     </header>
-                                    <main className='flex-1 my-4 flex flex-col cursor-pointer'>
+                                    <main
+                                        onClick={() =>
+                                            router.push(`/project/${id}`)
+                                        }
+                                        className='flex-1 my-4 flex flex-col cursor-pointer'
+                                    >
                                         <h3 className='text-xl md:text-2xl font-normal'>
                                             {name}
                                         </h3>

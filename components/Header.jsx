@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from './context/themeContext';
-import { Link } from 'react-scroll';
+import { Link as Scroll } from 'react-scroll';
 
 const Header = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
@@ -10,44 +10,44 @@ const Header = () => {
             <nav className='p-4 md:px-8 dark:bg-gray-900 flex justify-end align-center'>
                 <ul className='h-full align-center dark:text-gray-200 hidden md:flex'>
                     <li className='mr-4 mt-2 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 transition'>
-                        <Link
+                        <Scroll
                             to='about'
                             smooth={true}
                             duration={1000}
                             className='cursor-pointer'
                         >
                             about
-                        </Link>
+                        </Scroll>
                     </li>
                     <li className='mr-4 mt-2 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 transition'>
-                        <Link
+                        <Scroll
                             to='exprience'
                             smooth={true}
                             duration={1000}
                             className='cursor-pointer'
                         >
                             experience
-                        </Link>
+                        </Scroll>
                     </li>
                     <li className='mr-4 mt-2 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 transition'>
-                        <Link
+                        <Scroll
                             to='project'
                             smooth={true}
                             duration={1000}
                             className='cursor-pointer'
                         >
                             projects
-                        </Link>
+                        </Scroll>
                     </li>
                     <li className='mr-4 mt-2 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 transition'>
-                        <Link
+                        <Scroll
                             to='contact'
                             smooth={true}
                             duration={1000}
                             className='cursor-pointer'
                         >
                             contact
-                        </Link>
+                        </Scroll>
                     </li>
                 </ul>
                 <button
