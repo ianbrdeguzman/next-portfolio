@@ -58,8 +58,8 @@ const data = {
             ],
         },
     },
-    projects: {
-        portfolio: {
+    projects: [
+        {
             name: 'Portfolio v1',
             description:
                 'Version 1 of my portfolio. Using Nextjs react framework. Includes TailwindCSS dark mode theme toggle, api routes for data fetching and form submission.',
@@ -76,7 +76,7 @@ const data = {
                 mobile: '/portfolio-v1-mobile.png',
             },
         },
-        amazon: {
+        {
             name: 'Amazon Clone',
             description:
                 'A full stack Amazon clone MERN App, includes image carousel, product page, cart page and checkout steps with paypal checkout. User login, registration and ability to view order history.',
@@ -99,7 +99,7 @@ const data = {
                 mobile: '/amazon-clone-mobile.png',
             },
         },
-        todo: {
+        {
             name: 'Todo App',
             description:
                 'This project was a challenge from Frontend Mentor, it include ability to create, update, filter, delete todos. Has light and dark theme mode. The first project I worked with Redux, Nodejs, Expressjs and MongoDB Atlas. Learned alot with this simple app.',
@@ -122,7 +122,7 @@ const data = {
                 mobile: '/atodo-app-mobile.png',
             },
         },
-        youtube: {
+        {
             name: 'Youtube Clone',
             description:
                 'A Youtube clone, powered by Youtube API. Features includes paginated homepage, skeleton loading, search videos & channels, embeded video player. Firebase authorization. Ability to subscibe, comment and view liked videos and subscribed channels.',
@@ -149,7 +149,7 @@ const data = {
                 mobile: '/youtube-clone-mobile.png',
             },
         },
-        covid: {
+        {
             name: 'Covid-19 Tracker',
             description:
                 'A Covid-19 tracker that shows todays covid cases, recovered and deaths around the world. Shows world map and affected countries, history of cases within the last 90 days.',
@@ -171,7 +171,7 @@ const data = {
                 mobile: '/covid-19-mobile.png',
             },
         },
-        designo: {
+        {
             name: 'Designo Client',
             description:
                 'A Frontend Mentor challenge. A multipage fictitious client website. This was my first big project using Styled Components.',
@@ -190,7 +190,7 @@ const data = {
                 mobile: '/designo-multipage-mobile.png',
             },
         },
-    },
+    ],
     contact: {
         text: 'My inbox is always open, whether you want to reach out or provide feedback on how to improve my work. Feel free to send me a message and I will try to get back to you as soon as I can. Cheers!',
     },

@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
     };
 };
 
-const Home = ({ data: { about, experience, contact } }) => {
+const Home = ({ data: { about, experience, projects, contact } }) => {
     return (
         <div className='dark:bg-gray-900 dark:text-gray-200 relative'>
             <Link
@@ -34,7 +34,7 @@ const Home = ({ data: { about, experience, contact } }) => {
             <Hero />
             <About data={about} />
             <Experience data={experience} />
-            <Project />
+            <Project data={projects} />
             <Contact data={contact} />
         </div>
     );
