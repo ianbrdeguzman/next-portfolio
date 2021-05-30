@@ -2,7 +2,11 @@ import Image from 'next/image';
 import { FiGithub } from 'react-icons/fi';
 import { MdOpenInNew } from 'react-icons/md';
 
-const Project = ({ data: projects }) => {
+// {
+//     data: projects;
+// }
+
+const Project = () => {
     return (
         <section
             id='project'
@@ -15,7 +19,7 @@ const Project = ({ data: projects }) => {
                     </h2>
                     <div className='border-t border-blue-700 absolute top-1/2 right-0 w-6/12 md:w-7/12 lg:w-8/12'></div>
                 </header>
-                <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
+                {/* <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
                     {projects.map(
                         (
                             { name, description, technologies, repo, demo },
@@ -68,7 +72,7 @@ const Project = ({ data: projects }) => {
                             );
                         }
                     )}
-                </div>
+                </div> */}
             </div>
         </section>
     );

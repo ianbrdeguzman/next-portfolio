@@ -1,9 +1,11 @@
-const About = ({
-    data: {
-        text: { one, two },
-        skills: { frontend, backend, styling, others },
-    },
-}) => {
+// {
+//     data: {
+//         text: { one, two },
+//         skills: { frontend, backend, styling, others },
+//     },
+// }
+
+const About = () => {
     return (
         <section
             className='flex justify-center items-center min-h-screen'
@@ -16,7 +18,7 @@ const About = ({
                     </h2>
                     <div className='border-t border-blue-700 absolute top-1/2 right-0 w-6/12 md:w-7/12 lg:w-8/12'></div>
                 </header>
-                <main className='text-base md:text-xl'>
+                {/* <main className='text-base md:text-xl'>
                     <div>
                         <p className='mb-4'>{one}</p>
                         <p>{two}</p>
@@ -48,7 +50,7 @@ const About = ({
                             </ul>
                         </div>
                     </div>
-                </main>
+                </main> */}
             </article>
         </section>
     );
