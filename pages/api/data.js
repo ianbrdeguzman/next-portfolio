@@ -75,7 +75,7 @@ const data = {
             solution:
                 'Solution was to introduce a api cors middleware. Creating an app password for gmail account and adding envoronment variables via Vercel cli.',
             technologies: ['Nextjs', 'TailwindCSS', 'Nodemailer'],
-            demo: 'https://next-portfolio-2nepu4hk9-ianbrdeguzman.vercel.app/',
+            demo: 'https://next-portfolio-indol-one.vercel.app/',
             repo: 'https://github.com/ianbrdeguzman/next-portfolio',
             image: {
                 desktop: '/portfolio-v1-desktop.png',

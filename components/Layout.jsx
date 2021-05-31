@@ -6,6 +6,7 @@ import { ThemeContext } from './context/themeContext';
 
 const Layout = ({ children }) => {
     const { theme } = useContext(ThemeContext);
+
     return (
         <div className={theme === 'dark' ? 'dark' : ''}>
             <Head>

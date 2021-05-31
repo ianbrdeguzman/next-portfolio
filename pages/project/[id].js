@@ -1,11 +1,12 @@
 import axios from 'axios';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../../components/context/themeContext';
 import { FiGithub } from 'react-icons/fi';
 import { MdOpenInNew } from 'react-icons/md';
 import { HiOutlineBackspace } from 'react-icons/hi';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Router from 'next/router';
 
 export const getStaticPaths = async () => {
     try {
@@ -72,9 +73,9 @@ const ProjectDetails = ({ project }) => {
                 <div className='w-4/5 max-w-[900px]'>
                     <div
                         onClick={() => router.push(`/#project`)}
-                        className='fixed top-4 left-4 cursor-pointer hover:text-blue-700 transition'
+                        className='fixed top-4 left-4 cursor-pointer hover:text-blue-700 transition text-2xl'
                     >
-                        <HiOutlineBackspace size={28} />
+                        <HiOutlineBackspace />
                     </div>
                     <header className='my-4'>
                         <div className='flex justify-between items-center'>
@@ -85,16 +86,16 @@ const ProjectDetails = ({ project }) => {
                                 <a
                                     href={repo}
                                     target='_blank'
-                                    className='mr-4 text-blue-700 hover:text-gray-200 transition'
+                                    className='mr-4 text-blue-700 hover:text-gray-200 transition text-2xl'
                                 >
-                                    <FiGithub size={24} />
+                                    <FiGithub />
                                 </a>
                                 <a
                                     href={demo}
                                     target='_blank'
-                                    className='text-blue-700 hover:text-gray-200 transition'
+                                    className='text-blue-700 hover:text-gray-200 transition text-2xl'
                                 >
-                                    <MdOpenInNew size={24} />
+                                    <MdOpenInNew />
                                 </a>
                             </div>
                         </div>

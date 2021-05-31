@@ -2,7 +2,7 @@ import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const Footer = () => {
     return (
-        <div className='dark:bg-gray-900 p-4 text-center text-2xl text-gray-400 dark:text-gray-200'>
+        <div className='dark:bg-gray-900 p-4 text-center text-xl text-gray-400 dark:text-gray-200'>
             <div className='flex justify-center py-4'>
                 <a
                     href='mailto:ianbrdeguzman@gmail.com'

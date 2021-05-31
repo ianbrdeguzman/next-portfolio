@@ -1,10 +1,8 @@
-import { useRouter } from 'next/router';
 import { FiGithub } from 'react-icons/fi';
 import { MdOpenInNew } from 'react-icons/md';
+import Link from 'next/link';
 
 const Project = ({ data: projects }) => {
-    const router = useRouter();
-
     return (
         <section
             id='project'
@@ -36,43 +34,40 @@ const Project = ({ data: projects }) => {
                                         <a
                                             href={repo}
                                             target='_blank'
-                                            className='text-black hover:text-blue-700 dark:text-blue-700 dark:hover:text-white transition'
+                                            className='text-black text-xl hover:text-blue-700 dark:text-blue-700 dark:hover:text-white transition'
                                         >
-                                            <FiGithub size={24} />
+                                            <FiGithub />
                                         </a>
                                     </header>
-                                    <main
-                                        onClick={() =>
-                                            router.push(`/project/${id}`)
-                                        }
-                                        className='flex-1 my-4 flex flex-col cursor-pointer'
-                                    >
-                                        <h3 className='text-xl md:text-2xl font-normal'>
-                                            {name}
-                                        </h3>
-                                        <p className='my-4 flex-1'>
-                                            {description}
-                                        </p>
-                                        <div className='flex flex-wrap'>
-                                            {technologies.map((item, i) => {
-                                                return (
-                                                    <span
-                                                        key={i}
-                                                        className='mr-4 px-2 mb-1 rounded bg-blue-700 bg-opacity-10 text-sm'
-                                                    >
-                                                        {item}
-                                                    </span>
-                                                );
-                                            })}
-                                        </div>
-                                    </main>
+                                    <Link href={`/project/${id}`}>
+                                        <main className='flex-1 my-4 flex flex-col cursor-pointer'>
+                                            <h3 className='text-xl md:text-2xl font-normal'>
+                                                {name}
+                                            </h3>
+                                            <p className='my-4 flex-1'>
+                                                {description}
+                                            </p>
+                                            <div className='flex flex-wrap'>
+                                                {technologies.map((item, i) => {
+                                                    return (
+                                                        <span
+                                                            key={i}
+                                                            className='mr-4 px-2 mb-1 rounded bg-blue-700 bg-opacity-10 text-sm'
+                                                        >
+                                                            {item}
+                                                        </span>
+                                                    );
+                                                })}
+                                            </div>
+                                        </main>
+                                    </Link>
                                     <footer className='flex justify-end'>
                                         <a
                                             href={demo}
                                             target='_blank'
-                                            className='text-black hover:text-blue-700 dark:text-blue-700 dark:hover:text-white transition'
+                                            className='text-black text-xl hover:text-blue-700 dark:text-blue-700 dark:hover:text-white transition'
                                         >
-                                            <MdOpenInNew size={24} />
+                                            <MdOpenInNew />
                                         </a>
                                     </footer>
                                 </div>

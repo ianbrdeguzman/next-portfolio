@@ -4,7 +4,7 @@ import Experience from '../components/Experience';
 import Contact from '../components/Contact';
 import Project from '../components/Project';
 import axios from 'axios';
-import { Link } from 'react-scroll';
+import { Link as Scroll } from 'react-scroll';
 
 export const getStaticProps = async () => {
     const { data } = await axios.get(
@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
 const Home = ({ data: { about, experience, projects, contact } }) => {
     return (
         <div className='dark:bg-gray-900 dark:text-gray-200 relative'>
-            <Link
+            <Scroll
                 to='header'
                 smooth={true}
                 duration={1000}
@@ -30,7 +30,7 @@ const Home = ({ data: { about, experience, projects, contact } }) => {
                 <button className='transform scale-150 focus:outline-none'>
                     ☝️
                 </button>
-            </Link>
+            </Scroll>
             <Hero />
             <About data={about} />
             <Experience data={experience} />
