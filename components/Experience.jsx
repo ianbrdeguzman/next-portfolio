@@ -10,13 +10,23 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
         >
             <div className='w-4/5 max-w-[900px] font-thin'>
                 <header className='flex relative w-full justify-end'>
-                    <div className='border-t border-blue-700 absolute top-1/2 left-0 w-6/12 md:w-7/12 lg:w-8/12'></div>
-                    <h1 className='xs:text-2xl sm:text-3xl md:text-5xl my-4'>
+                    <div
+                        data-aos='fade-right'
+                        className='border-t border-blue-700 absolute top-1/2 left-0 w-6/12 md:w-7/12 lg:w-8/12'
+                    ></div>
+                    <h1
+                        data-aos='fade-left'
+                        className='xs:text-2xl sm:text-3xl md:text-5xl my-4'
+                    >
                         Experience
                     </h1>
                 </header>
                 <main className='my-4 md:flex'>
-                    <div className='flex justify-around text-gray-500 md:flex-col md:mr-4 min-w-[120px] self-start'>
+                    <div
+                        data-aos='fade-up'
+                        data-aos-delay='200'
+                        className='flex justify-around text-gray-500 md:flex-col md:mr-4 min-w-[120px] self-start'
+                    >
                         <button
                             value='e'
                             className={`focus:outline-none py-4 flex-1 transition duration-300 max-h-[57px] ${
@@ -53,7 +63,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                     </div>
                     <div className='xs:mt-4 md:mt-0 flex-1'>
                         {selected === 'e' ? (
-                            <article>
+                            <article data-aos='fade-left' data-aos-delay='400'>
                                 <h3 className='text-xl md:text-2xl font-normal'>
                                     {enbridge.role} @{' '}
                                     <Link href='https://www.enbridge.com/'>

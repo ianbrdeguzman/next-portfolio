@@ -6,12 +6,15 @@ import { ThemeProvider } from '../components/context/themeContext';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import NProgress from 'nprogress';
+import aos from 'aos';
+import 'aos/dist/aos.css';
 NProgress.configure({ showSpinner: false });
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
     useEffect(() => {
+        aos.init();
         const handleRouteChangeStart = () => {
             NProgress.start();
         };

@@ -1,12 +1,11 @@
 import axios from 'axios';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../../components/context/themeContext';
 import { FiGithub } from 'react-icons/fi';
 import { MdOpenInNew } from 'react-icons/md';
 import { HiOutlineBackspace } from 'react-icons/hi';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Router from 'next/router';
 
 export const getStaticPaths = async () => {
     try {
@@ -72,6 +71,7 @@ const ProjectDetails = ({ project }) => {
             <div className='flex justify-center items-center min-h-screen dark:bg-gray-900 dark:text-gray-200 font-thin'>
                 <div className='w-4/5 max-w-[900px]'>
                     <div
+                        data-aos='fade-down'
                         onClick={() => router.push(`/#project`)}
                         className='fixed top-4 left-4 cursor-pointer hover:text-blue-700 transition text-2xl'
                     >
@@ -79,10 +79,13 @@ const ProjectDetails = ({ project }) => {
                     </div>
                     <header className='my-4'>
                         <div className='flex justify-between items-center'>
-                            <h1 className='text-3xl md:text-5xl mb-4 mt-8 hover:text-blue-700 transition'>
+                            <h1
+                                data-aos='fade-right'
+                                className='text-3xl md:text-5xl mb-4 mt-8 hover:text-blue-700 transition'
+                            >
                                 <a href={demo}>{name}</a>
                             </h1>
-                            <div className='flex mt-4'>
+                            <div data-aos='fade-left' className='flex mt-4'>
                                 <a
                                     href={repo}
                                     target='_blank'
@@ -99,14 +102,17 @@ const ProjectDetails = ({ project }) => {
                                 </a>
                             </div>
                         </div>
-                        <p className='md:text-xl mb-4'>
+                        <p data-aos='fade-up' className='md:text-xl mb-4'>
                             <span className='text-blue-700'>Description: </span>
                             {description}
                         </p>
                         <ul className='flex md:text-xl justify-end flex-wrap'>
                             {technologies.map((tech, i) => {
+                                const delay = String((i + 1) * 100);
                                 return (
                                     <li
+                                        data-aos='fade-left'
+                                        data-aos-delay={delay}
                                         key={i}
                                         className='mr-2 mb-2 px-2 rounded bg-blue-700 bg-opacity-10 text-base'
                                     >
@@ -116,7 +122,7 @@ const ProjectDetails = ({ project }) => {
                             })}
                         </ul>
                     </header>
-                    <div className='relative mb-4'>
+                    <div data-aos='fade' className='relative mb-4'>
                         <Image
                             src={desktop}
                             alt={name}
@@ -135,15 +141,15 @@ const ProjectDetails = ({ project }) => {
                         </div>
                     </div>
                     <div className='md:text-xl mb-8'>
-                        <p>
+                        <p data-aos='fade'>
                             <span className='text-blue-700'>Challenges: </span>
                             {challenge}
                         </p>
-                        <p className='my-4'>
+                        <p data-aos='fade' className='my-4'>
                             <span className='text-blue-700'>Solution: </span>
                             {solution}
                         </p>
-                        <div>
+                        <div data-aos='fade'>
                             <p className='text-blue-700'>Todos:</p>
                             <ul className='list-square list-inside'>
                                 {todos.map((item, i) => {
