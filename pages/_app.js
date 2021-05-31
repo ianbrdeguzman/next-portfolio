@@ -4,16 +4,7 @@ import { ThemeProvider } from '../components/context/themeContext';
 import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {
-    console.log(Component.name);
     switch (Component.name) {
-        case 'ProjectDetails':
-            return (
-                <ThemeProvider>
-                    <FormProvider>
-                        <Component {...pageProps} />
-                    </FormProvider>
-                </ThemeProvider>
-            );
         case 'Home':
             return (
                 <ThemeProvider>
@@ -21,6 +12,14 @@ function MyApp({ Component, pageProps }) {
                         <Layout>
                             <Component {...pageProps} />
                         </Layout>
+                    </FormProvider>
+                </ThemeProvider>
+            );
+        default:
+            return (
+                <ThemeProvider>
+                    <FormProvider>
+                        <Component {...pageProps} />
                     </FormProvider>
                 </ThemeProvider>
             );
