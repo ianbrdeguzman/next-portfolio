@@ -4,6 +4,11 @@ const data = {
             one: 'Hi! My name is Ian De Guzman, Industrial Engineer who fell in love with programming, and has been in the I.T. industry since 2013. I am a self-taught, resilient, and hardworking developer who looks forward to collaborate and learn from engineers who are much smarter than me.',
             two: 'Originally from the Philippines, lived in Sydney, Australia and currently based in Toronto, Canada. Moved across the globe to chase opportunities and pursue my passion.',
         },
+        education: [
+            'Bachelor of Science in Industrial Engineering - University of Santo Tomas',
+            'Accredited as Industrial Engineer - World Education Services',
+            'Accredited as Industrial Engineer - Engineers Australia',
+        ],
         skills: {
             frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Redux'],
             backend: ['Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Nextjs'],

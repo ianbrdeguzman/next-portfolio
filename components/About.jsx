@@ -1,6 +1,7 @@
 const About = ({
     data: {
         text: { one, two },
+        // education,
         skills: { frontend, backend, styling, others },
     },
 }) => {
@@ -17,9 +18,26 @@ const About = ({
                     <div className='border-t border-blue-700 absolute top-1/2 right-0 w-6/12 md:w-7/12 lg:w-8/12'></div>
                 </header>
                 <main className='text-base md:text-xl'>
+                    <div className='mb-4'>
+                        <p className='mb-4'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Facere suscipit maxime ad eligendi
+                            perspiciatis libero architecto velit, ducimus
+                            voluptatibus harum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corrupti error, eum pariatur inventore aliquid
+                            accusamus reprehenderit ipsum sint voluptatibus qui?
+                        </p>
+                    </div>
                     <div>
-                        <p className='mb-4'>{one}</p>
-                        <p>{two}</p>
+                        {/* <p className='text-blue-700'>Education:</p>
+                        <ul>
+                            {education.map((item, i) => {
+                                return <li key={i}>{item}</li>;
+                            })}
+                        </ul> */}
                     </div>
                     <div>
                         <p className='my-4 text-blue-700'>
