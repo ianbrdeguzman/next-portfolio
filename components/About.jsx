@@ -1,7 +1,7 @@
 const About = ({
     data: {
         text: { one, two },
-        // education,
+        education,
         skills: { frontend, backend, styling, others },
     },
 }) => {
@@ -19,25 +19,18 @@ const About = ({
                 </header>
                 <main className='text-base md:text-xl'>
                     <div className='mb-4'>
-                        <p className='mb-4'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Facere suscipit maxime ad eligendi
-                            perspiciatis libero architecto velit, ducimus
-                            voluptatibus harum.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Corrupti error, eum pariatur inventore aliquid
-                            accusamus reprehenderit ipsum sint voluptatibus qui?
-                        </p>
+                        <p className='mb-4'>{one}</p>
+                        <p>{two}</p>
                     </div>
                     <div>
-                        {/* <p className='text-blue-700'>Education:</p>
+                        <p className='text-blue-700 mb-4'>
+                            Education & Certifications:
+                        </p>
                         <ul>
                             {education.map((item, i) => {
                                 return <li key={i}>{item}</li>;
                             })}
-                        </ul> */}
+                        </ul>
                     </div>
                     <div>
                         <p className='my-4 text-blue-700'>
