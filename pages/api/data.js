@@ -1,8 +1,8 @@
 const data = {
     about: {
         text: {
-            one: 'Hi! my name is Ian De Guzman, an Industrial Engineering graduate who turned Front-End developer with the focus on building fast, clean and maintanable code.',
-            two: 'Currently, based in Toronto, Canada. I am a self-taught, passionate, and hardworking developer looking forward to collaborate and learn from engineers who are much smarter than me while building applications that solve problems and are used by thousands.',
+            one: 'Hi! My name is Ian De Guzman, Industrial Engineer who fell in love with programming, and has been in the I.T. industry since 2013. I am a self-taught, resilient, and hardworking developer who looks forward to collaborate and learn from engineers who are much smarter than me.',
+            two: 'Originally from the Philippines, lived in Sydney, Australia and currently based in Toronto, Canada. Moved across the globe to chase opportunities and pursue my passion.',
         },
         skills: {
             frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Redux'],
