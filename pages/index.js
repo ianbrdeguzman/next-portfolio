@@ -5,6 +5,7 @@ import Contact from '../components/Contact';
 import Project from '../components/Project';
 import axios from 'axios';
 import { Link as Scroll } from 'react-scroll';
+import { useEffect, useState } from 'react';
 
 export const getStaticProps = async () => {
     const { data } = await axios.get(
@@ -19,18 +20,36 @@ export const getStaticProps = async () => {
 };
 
 const Home = ({ data: { about, experience, projects, contact } }) => {
+    const [show, setShow] = useState(false);
+
+    const showScrollToTop = () => {
+        if (window.scrollY > window.screen.height) {
+            setShow(true);
+        } else {
+            setShow(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', showScrollToTop);
+        return () => {
+            window.removeEventListener('scroll', showScrollToTop);
+        };
+    }, []);
     return (
         <div className='dark:bg-gray-900 dark:text-gray-200 relative'>
-            <Scroll
-                to='header'
-                smooth={true}
-                duration={1000}
-                className='fixed bottom-8 right-8 xs:invisible md:visible'
-            >
-                <button className='transform scale-150 focus:outline-none'>
-                    ☝️
-                </button>
-            </Scroll>
+            {show && (
+                <Scroll
+                    to='header'
+                    smooth={true}
+                    duration={1000}
+                    className='fixed bottom-8 right-8 xs:invisible md:visible transition-all'
+                >
+                    <button className='transform scale-150 focus:outline-none'>
+                        ☝️
+                    </button>
+                </Scroll>
+            )}
             <Hero />
             <About data={about} />
             <Experience data={experience} />
