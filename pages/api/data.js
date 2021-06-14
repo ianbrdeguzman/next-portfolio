@@ -65,6 +65,34 @@ const data = {
     },
     projects: [
         {
+            id: 0,
+            name: 'Netflix Clone',
+            description:
+                'A full stack Netflix clone app, Using React, Styled Components, Redux Toolkit, Axios on frontend, Firebase Auth and Firestore on backend.',
+            todos: [
+                'Integrate Facebook Sign In',
+                'Manage Profiles',
+                'Account details page',
+            ],
+            challenge:
+                'First time dealing with Firebase Auth and Firestore so it took sometime figuring out how to update array fields in Firestore.',
+            solution:
+                'Solution was to use Firestore arrayUnion and arrayRemove function to properly update fields inside an array.',
+            technologies: [
+                'React',
+                'Styled Components',
+                'Redux Toolkit',
+                'Firebase Auth',
+                'Firestore',
+            ],
+            demo: 'https://netflix-clone-68612.web.app/',
+            repo: 'https://github.com/ianbrdeguzman/react-netflix-clone',
+            image: {
+                desktop: '/netflix-clone-desktop.png',
+                mobile: '/netflix-clone-mobile.png',
+            },
+        },
+        {
             id: 1,
             name: 'Portfolio v1',
             description:
