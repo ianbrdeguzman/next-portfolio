@@ -45,7 +45,7 @@ const Home = ({ data: { about, experience, projects, contact } }) => {
                     duration={1000}
                     className='fixed bottom-8 right-8 xs:invisible md:visible transition-all'
                 >
-                    <button className='transform scale-150 focus:outline-none'>
+                    <button className='text-2xl focus:outline-none hover:animate-bounce p-2'>
                         ☝️
                     </button>
                 </Scroll>

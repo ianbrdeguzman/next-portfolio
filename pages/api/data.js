@@ -19,7 +19,7 @@ const data = {
                 'Tailwind CSS',
                 'Material UI',
             ],
-            others: ['Vercel', 'Heroku', 'Netlify', 'Postman', 'Git / Github'],
+            others: ['GraphQL', 'Apollo', 'Netlify', 'Heroku', 'Git / Github'],
         },
     },
     experience: {
@@ -66,6 +66,35 @@ const data = {
     projects: [
         {
             id: 0,
+            name: 'Messenger Clone',
+            description:
+                'A MERNG stack Messenger clone app, Using React, Context API, SASS/SCSS, Apollo Client on frontend, Apollo Server, MongoDB and Node on backend. Ability to send and receive message realtime and react to messages without refreshing the page. Backend deployed on Heroku and Frontend deployed on Netlify.',
+            todos: [
+                'File/Image Upload',
+                'Upload Avatar Image',
+                'Account Password Reset',
+            ],
+            challenge:
+                'First project using GraphQL, used both Apollo Client and Server. One problem I encounter was Apollo websocket is making the connection at build time therefore bearer token which should be captured upon login cannot be authenticated on backend middleware.',
+            solution:
+                'Solution I found was to refresh the page upon login or reconnect the websocket link upon login. I choose the latter.',
+            technologies: [
+                'React',
+                'SASS/SCSS',
+                'Context API',
+                'GraphQL',
+                'MongoDB',
+                'Node',
+            ],
+            demo: 'https://sleepy-clarke-0965a3.netlify.app/',
+            repo: 'https://github.com/ianbrdeguzman/merng-messenger',
+            image: {
+                desktop: '/messenger-clone-desktop.png',
+                mobile: '/messenger-clone-mobile.png',
+            },
+        },
+        {
+            id: 1,
             name: 'Netflix Clone',
             description:
                 'A full stack Netflix clone app, Using React, Styled Components, Redux Toolkit, Axios on frontend, Firebase Auth and Firestore on backend.',
@@ -93,7 +122,7 @@ const data = {
             },
         },
         {
-            id: 1,
+            id: 2,
             name: 'Portfolio v1',
             description:
                 'Version 1 of my portfolio. Using Nextjs react framework. Includes TailwindCSS dark mode theme toggle, api routes for data fetching and form submission.',
@@ -111,7 +140,7 @@ const data = {
             },
         },
         {
-            id: 2,
+            id: 3,
             name: 'Amazon Clone',
             description:
                 'A full stack Amazon clone MERN App, includes image carousel, product page, cart page and checkout steps with paypal checkout. User login, registration and ability to view order history.',
@@ -135,7 +164,7 @@ const data = {
             },
         },
         {
-            id: 3,
+            id: 4,
             name: 'Todo App',
             description:
                 'This project was a challenge from Frontend Mentor, it include ability to create, update, filter, delete todos. Has light and dark theme mode. The first project I worked with Redux, Nodejs, Expressjs and MongoDB Atlas. Learned alot with this simple app.',
@@ -159,7 +188,7 @@ const data = {
             },
         },
         {
-            id: 4,
+            id: 5,
             name: 'Youtube Clone',
             description:
                 'A Youtube clone, powered by Youtube API. Features includes paginated homepage, skeleton loading, search videos & channels, embeded video player. Firebase authorization. Ability to subscibe, comment and view liked videos and subscribed channels.',
@@ -187,7 +216,7 @@ const data = {
             },
         },
         {
-            id: 5,
+            id: 6,
             name: 'Covid-19 Tracker',
             description:
                 'A Covid-19 tracker that shows todays covid cases, recovered and deaths around the world. Shows world map and affected countries, history of cases within the last 90 days.',
@@ -210,7 +239,7 @@ const data = {
             },
         },
         {
-            id: 6,
+            id: 7,
             name: 'Designo Client',
             description:
                 'A Frontend Mentor challenge. A multipage fictitious client website. This was my first big project using Styled Components.',

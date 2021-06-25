@@ -7,13 +7,15 @@ const Header = () => {
     return (
         <header id='header'>
             <nav className='p-4 md:px-8 dark:bg-gray-900 flex justify-end align-center'>
-                <button
+                <div
                     onClick={toggleTheme}
                     data-aos='fade-down'
-                    className='cursor-pointer p-2 bg-gray-100 dark:bg-gray-800 rounded focus:outline-none focus:ring focus:ring-blue-700 focus:bg-transparent transition'
+                    className='rounded bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
                 >
-                    {theme === 'light' ? '🌑' : '🌞'}
-                </button>
+                    <button className='cursor-pointer p-2 bg-white dark:bg-gray-900 rounded focus:outline-none m-0.5'>
+                        {theme === 'light' ? '🌑' : '🌞'}
+                    </button>
+                </div>
             </nav>
         </header>
     );

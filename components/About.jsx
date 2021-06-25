@@ -20,7 +20,7 @@ const About = ({
                     </h2>
                     <div
                         data-aos='fade-left'
-                        className='border-t border-blue-700 absolute top-1/2 right-0 w-6/12 md:w-7/12 lg:w-8/12'
+                        className='p-0.5 bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 absolute top-1/2 right-0 w-6/12 md:w-7/12 lg:w-8/12'
                     ></div>
                 </header>
                 <main className='text-base md:text-xl'>
@@ -29,7 +29,7 @@ const About = ({
                         <p>{two}</p>
                     </div>
                     <div data-aos='fade-up' data-aos-delay='100'>
-                        <p className='text-blue-700 mb-4'>
+                        <p className='mb-4 font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'>
                             Education & Certifications:
                         </p>
                         <ul>
@@ -39,7 +39,7 @@ const About = ({
                         </ul>
                     </div>
                     <div data-aos='fade-up' data-aos-delay='200'>
-                        <p className='my-4 text-blue-700'>
+                        <p className='my-4 font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'>
                             Some technologies I'm familiar with:
                         </p>
                         <div className='flex justify-between flex-wrap'>

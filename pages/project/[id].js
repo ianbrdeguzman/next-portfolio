@@ -68,12 +68,12 @@ const ProjectDetails = ({ project }) => {
 
     return (
         <section className={theme === 'dark' ? 'dark' : ''}>
-            <div className='flex justify-center items-center min-h-screen dark:bg-gray-900 dark:text-gray-200 font-thin'>
+            <div className='flex justify-center items-center min-h-screen dark:bg-gray-900 dark:text-white font-thin'>
                 <div className='w-4/5 max-w-[900px]'>
                     <div
                         data-aos='fade-down'
                         onClick={() => router.push(`/#project`)}
-                        className='fixed top-4 left-4 cursor-pointer hover:text-blue-700 transition text-2xl'
+                        className='fixed top-4 left-4 cursor-pointer text-2xl'
                     >
                         <HiOutlineBackspace />
                     </div>
@@ -81,7 +81,7 @@ const ProjectDetails = ({ project }) => {
                         <div className='flex justify-between items-center'>
                             <h1
                                 data-aos='fade-right'
-                                className='text-3xl md:text-5xl mb-4 mt-8 hover:text-blue-700 transition'
+                                className='text-3xl md:text-5xl mb-4 mt-8'
                             >
                                 <a href={demo}>{name}</a>
                             </h1>
@@ -89,21 +89,23 @@ const ProjectDetails = ({ project }) => {
                                 <a
                                     href={repo}
                                     target='_blank'
-                                    className='mr-4 text-blue-700 hover:text-gray-200 transition text-2xl'
+                                    className='mr-4 text-white transform hover:scale-125 transition text-2xl'
                                 >
                                     <FiGithub />
                                 </a>
                                 <a
                                     href={demo}
                                     target='_blank'
-                                    className='text-blue-700 hover:text-gray-200 transition text-2xl'
+                                    className='text-white transform hover:scale-125 transition text-2xl'
                                 >
                                     <MdOpenInNew />
                                 </a>
                             </div>
                         </div>
                         <p data-aos='fade-up' className='md:text-xl mb-4'>
-                            <span className='text-blue-700'>Description: </span>
+                            <span className='bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 font-bold'>
+                                Description:{' '}
+                            </span>
                             {description}
                         </p>
                         <ul className='flex md:text-xl justify-end flex-wrap'>
@@ -114,9 +116,11 @@ const ProjectDetails = ({ project }) => {
                                         data-aos='fade-left'
                                         data-aos-delay={delay}
                                         key={i}
-                                        className='mr-2 mb-2 px-2 rounded bg-blue-700 bg-opacity-10 text-base'
+                                        className='mr-1 mb-1 bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 rounded text-base'
                                     >
-                                        {tech}
+                                        <span className='m-0.5 px-2 rounded bg-white dark:bg-gray-900 text-sm block'>
+                                            {tech}
+                                        </span>
                                     </li>
                                 );
                             })}
@@ -142,15 +146,21 @@ const ProjectDetails = ({ project }) => {
                     </div>
                     <div className='md:text-xl mb-8'>
                         <p data-aos='fade'>
-                            <span className='text-blue-700'>Challenges: </span>
+                            <span className='bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 font-bold'>
+                                Challenges:{' '}
+                            </span>
                             {challenge}
                         </p>
                         <p data-aos='fade' className='my-4'>
-                            <span className='text-blue-700'>Solution: </span>
+                            <span className='bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 font-bold'>
+                                Solution:{' '}
+                            </span>
                             {solution}
                         </p>
                         <div data-aos='fade'>
-                            <p className='text-blue-700'>Todos:</p>
+                            <span className='bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 font-bold'>
+                                Todos:
+                            </span>
                             <ul className='list-square list-inside'>
                                 {todos.map((item, i) => {
                                     return <li key={i}>{item}</li>;

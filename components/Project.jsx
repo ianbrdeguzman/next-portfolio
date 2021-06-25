@@ -18,7 +18,7 @@ const Project = ({ data: projects }) => {
                     </h2>
                     <div
                         data-aos='fade-left'
-                        className='border-t border-blue-700 absolute top-1/2 right-0 w-6/12 md:w-7/12 lg:w-8/12'
+                        className='p-0.5 bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 absolute top-1/2 right-0 w-6/12 md:w-7/12 lg:w-8/12'
                     ></div>
                 </header>
                 <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
@@ -33,16 +33,17 @@ const Project = ({ data: projects }) => {
                                     data-aos='fade-up'
                                     data-aos-delay={delay}
                                     key={id}
-                                    className='border border-blue-700 dark:border-none dark:bg-blue-700 dark:bg-opacity-10 rounded p-4 min-h-[300px] flex flex-col'
+                                    className='rounded min-h-[300px] flex flex-col border p-4'
                                 >
                                     <header className='flex justify-end'>
-                                        <a
-                                            href={repo}
-                                            target='_blank'
-                                            className='text-black text-xl hover:text-blue-700 dark:text-blue-700 dark:hover:text-white transition'
-                                        >
-                                            <FiGithub />
-                                        </a>
+                                        <Link href={repo}>
+                                            <a
+                                                target='_blank'
+                                                className='text-black text-xl dark:text-white transform hover:scale-125 transition'
+                                            >
+                                                <FiGithub />
+                                            </a>
+                                        </Link>
                                     </header>
                                     <Link href={`/project/${id}`}>
                                         <main className='flex-1 my-4 flex flex-col cursor-pointer'>
@@ -55,11 +56,13 @@ const Project = ({ data: projects }) => {
                                             <div className='flex flex-wrap'>
                                                 {technologies.map((item, i) => {
                                                     return (
-                                                        <span
-                                                            key={i}
-                                                            className='mr-4 px-2 mb-1 rounded bg-blue-700 bg-opacity-10 text-sm'
-                                                        >
-                                                            {item}
+                                                        <span className='mr-1 mb-1 bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 rounded'>
+                                                            <span
+                                                                key={i}
+                                                                className='m-0.5 px-2 rounded bg-white dark:bg-gray-900 text-sm block'
+                                                            >
+                                                                {item}
+                                                            </span>
                                                         </span>
                                                     );
                                                 })}
@@ -67,13 +70,14 @@ const Project = ({ data: projects }) => {
                                         </main>
                                     </Link>
                                     <footer className='flex justify-end'>
-                                        <a
-                                            href={demo}
-                                            target='_blank'
-                                            className='text-black text-xl hover:text-blue-700 dark:text-blue-700 dark:hover:text-white transition'
-                                        >
-                                            <MdOpenInNew />
-                                        </a>
+                                        <Link href={demo}>
+                                            <a
+                                                target='_blank'
+                                                className='text-black text-xl dark:text-white transform hover:scale-125 transition'
+                                            >
+                                                <MdOpenInNew />
+                                            </a>
+                                        </Link>
                                     </footer>
                                 </div>
                             );
