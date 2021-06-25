@@ -91,7 +91,7 @@ const Contact = ({ data: { text } }) => {
                             </div>
                             <div
                                 data-aos='fade-left'
-                                className='flex-1 mr-4 pb-0.5 bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
+                                className='flex-1 pb-0.5 bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
                             >
                                 <label
                                     htmlFor='email'
