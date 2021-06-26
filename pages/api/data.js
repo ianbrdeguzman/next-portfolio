@@ -130,7 +130,12 @@ const data = {
                 'Some of the challenge was deployment on Vercel, encountered CORS error, invalid auth using gmail smtp and missing environment variables.',
             solution:
                 'Solution was to introduce a api cors middleware. Creating an app password for gmail account and adding envoronment variables via Vercel cli.',
-            technologies: ['Nextjs', 'TailwindCSS', 'Nodemailer'],
+            technologies: [
+                'Nextjs',
+                'TailwindCSS',
+                'Nodemailer',
+                'React Hook Form',
+            ],
             demo: 'https://next-portfolio-indol-one.vercel.app/',
             repo: 'https://github.com/ianbrdeguzman/next-portfolio',
             image: {
