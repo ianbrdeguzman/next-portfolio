@@ -50,17 +50,17 @@ const Project = ({ data: projects }) => {
                                             <h3 className='text-xl md:text-2xl font-normal'>
                                                 {name}
                                             </h3>
-                                            <p className='my-4 flex-1'>
+                                            <p className='my-4 flex-1 line-clamp-4'>
                                                 {description}
                                             </p>
                                             <div className='flex flex-wrap'>
                                                 {technologies.map((item, i) => {
                                                     return (
-                                                        <span className='mr-1 mb-1 bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 rounded'>
-                                                            <span
-                                                                key={i}
-                                                                className='m-0.5 px-2 rounded bg-white dark:bg-gray-900 text-sm block'
-                                                            >
+                                                        <span
+                                                            key={i}
+                                                            className='mr-1 mb-1 bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 rounded'
+                                                        >
+                                                            <span className='m-0.5 px-2 rounded bg-white dark:bg-gray-900 text-sm block'>
                                                                 {item}
                                                             </span>
                                                         </span>

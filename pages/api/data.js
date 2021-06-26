@@ -68,7 +68,7 @@ const data = {
             id: 0,
             name: 'Messenger Clone',
             description:
-                'A MERNG stack Messenger clone app, Using React, Context API, SASS/SCSS, Apollo Client on frontend, Apollo Server, MongoDB and Node on backend. Ability to send and receive message realtime and react to messages without refreshing the page. Backend deployed on Heroku and Frontend deployed on Netlify.',
+                'Ability to send and receive message realtime and react to messages without refreshing the page. A MERNG stack Messenger clone app, Using React, Context API, SASS/SCSS, Apollo Client on frontend, Apollo Server, MongoDB and Node on backend. Backend deployed on Heroku and Frontend deployed on Netlify. ',
             todos: [
                 'File/Image Upload',
                 'Upload Avatar Image',
@@ -97,7 +97,7 @@ const data = {
             id: 1,
             name: 'Netflix Clone',
             description:
-                'A full stack Netflix clone app, Using React, Styled Components, Redux Toolkit, Axios on frontend, Firebase Auth and Firestore on backend.',
+                'Shows trending movies, Netflix originals and more. Ability to add and remove a movie to your playlist. Includes an embedded video player that plays selected movie trailers. A full stack Netflix clone app, Using React, Styled Components, Redux Toolkit, Axios on the frontend, and Firebase Firestore on backend. Deployed in Firebase.',
             todos: [
                 'Integrate Facebook Sign In',
                 'Manage Profiles',
@@ -111,8 +111,7 @@ const data = {
                 'React',
                 'Styled Components',
                 'Redux Toolkit',
-                'Firebase Auth',
-                'Firestore',
+                'Firebase',
             ],
             demo: 'https://netflix-clone-68612.web.app/',
             repo: 'https://github.com/ianbrdeguzman/react-netflix-clone',
@@ -125,7 +124,7 @@ const data = {
             id: 2,
             name: 'Portfolio v1',
             description:
-                'Version 1 of my portfolio. Using Nextjs react framework. Includes TailwindCSS dark mode theme toggle, api routes for data fetching and form submission.',
+                'Version 1 of my portfolio. Using Nextjs React framework. Includes TailwindCSS dark mode theme toggle, api routes for data fetching and form submission. Nodemailer to send emails to my personal email address. Deployed in Vercel.',
             todos: ['Better styling', 'Better animation', 'Add more projects'],
             challenge:
                 'Some of the challenge was deployment on Vercel, encountered CORS error, invalid auth using gmail smtp and missing environment variables.',
@@ -143,7 +142,7 @@ const data = {
             id: 3,
             name: 'Amazon Clone',
             description:
-                'A full stack Amazon clone MERN App, includes image carousel, product page, cart page and checkout steps with paypal checkout. User login, registration and ability to view order history.',
+                'Features image carousel, product page, cart page and checkout steps along with paypal checkout. User login, registration and ability to view order history. A full stack Amazon clone MERN App using REST APIs. Created using React, TailwindCSS, Redux and Axios on frontend and Node, Express and MongoDB on the backend. Frontend deployed on Netlify and backend deployed on Heroku.',
             todos: ['Ability to search', 'Admin dashboard', 'Stripe checkout'],
             challenge:
                 'Biggest challenge was deploying backend on heroku, found out that Mongoose lets you start using your models immediately, without waiting for mongoose to establish a connection to MongoDB',
@@ -167,7 +166,7 @@ const data = {
             id: 4,
             name: 'Todo App',
             description:
-                'This project was a challenge from Frontend Mentor, it include ability to create, update, filter, delete todos. Has light and dark theme mode. The first project I worked with Redux, Nodejs, Expressjs and MongoDB Atlas. Learned alot with this simple app.',
+                'This project was a challenge from Frontend Mentor, it include ability to create, update, filter, delete todos. Has light and dark theme mode toggle. The first project I worked with Redux, Nodejs, Expressjs and MongoDB Atlas. Learned alot with this simple app.',
             todos: ['Ability to sort todos via drag and drop'],
             challenge:
                 'Biggest challenge was implementing sort todos via drag and drop.',
@@ -191,7 +190,7 @@ const data = {
             id: 5,
             name: 'Youtube Clone',
             description:
-                'A Youtube clone, powered by Youtube API. Features includes paginated homepage, skeleton loading, search videos & channels, embeded video player. Firebase authorization. Ability to subscibe, comment and view liked videos and subscribed channels.',
+                'A Youtube clone, powered by Youtube API. Features include paginated homepage, skeleton loading, search videos & channels, embed youtube video player. User authentication using gmail api on Firebase. Ability to search, comment, view liked videos and subscribe to channels. Created using React, Context API, CSS Modules, React Router, and deployed in Firebase.',
             todos: [
                 'Like and unlike a video',
                 'Unsubscribe to a channel',
@@ -219,10 +218,10 @@ const data = {
             id: 6,
             name: 'Covid-19 Tracker',
             description:
-                'A Covid-19 tracker that shows todays covid cases, recovered and deaths around the world. Shows world map and affected countries, history of cases within the last 90 days.',
+                'A Covid-19 tracker that shows todays covid cases, recovered and deaths around the world. Shows world map and affected countries, history of cases within the last 90 days and a table of highes cases, recovered and deaths. Created using React, Material UI, React Chart and React Leaflet. Powered by Disease.sh API and deployed to Firebase.',
             todos: ['Light and Dark Theme', 'Sort highest cases table'],
             challenge:
-                'Biggest challenge Leafletjs map, spent days figuring out how React Leaflet works and how to make it appear on screen.',
+                'Biggest challenge Leafletjs map, spent some time figuring out how React Leaflet works and how to make it appear on screen.',
             solution: 'The simple solution was it needs a fixed height.',
             technologies: [
                 'React',
@@ -242,7 +241,7 @@ const data = {
             id: 7,
             name: 'Designo Client',
             description:
-                'A Frontend Mentor challenge. A multipage fictitious client website. This was my first big project using Styled Components.',
+                'A Frontend Mentor challenge. A multi-page fictitious client website. This was my first big project using Styled Components. Created using React, React Router, Styled Components and React Leaflet. Deployed to Firebase.',
             todos: [
                 'Form submission API',
                 'Separate data file for each component',
@@ -250,7 +249,12 @@ const data = {
             challenge:
                 'Tried my best to style as close to the challenge as possible.',
             solution: 'Learned to adapt based on props.',
-            technologies: ['React', 'Styled Components', 'React Leaflet'],
+            technologies: [
+                'React',
+                'Styled Components',
+                'React Leaflet',
+                'Firebase',
+            ],
             demo: 'https://designo-multipage.web.app/',
             repo: 'https://github.com/ianbrdeguzman/react-fem-designo',
             image: {

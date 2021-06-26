@@ -28,7 +28,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                         className='flex justify-around text-gray-500 md:flex-col md:mr-4 min-w-[120px] self-start'
                     >
                         <div
-                            class={`flex justify-center flex-1 ${
+                            className={`flex justify-center flex-1 ${
                                 selected === 'e'
                                     ? 'bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
                                     : 'bg-gray-100 bg-opacity-10'
@@ -49,7 +49,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                             </div>
                         </div>
                         <div
-                            class={`flex justify-center flex-1 ${
+                            className={`flex justify-center flex-1 ${
                                 selected === 's'
                                     ? 'bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
                                     : 'bg-gray-100 bg-opacity-10'
@@ -70,7 +70,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                             </div>
                         </div>
                         <div
-                            class={`flex justify-center flex-1 ${
+                            className={`flex justify-center flex-1 ${
                                 selected === 'a'
                                     ? 'bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
                                     : 'bg-gray-100 bg-opacity-10'
