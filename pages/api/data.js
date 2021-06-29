@@ -11,7 +11,7 @@ const data = {
         ],
         skills: {
             frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Redux'],
-            backend: ['Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Nextjs'],
+            backend: ['Node', 'Express', 'MongoDB', 'Firebase', 'Next.js'],
             styling: [
                 'SASS/SCSS',
                 'Styled Components',
@@ -77,7 +77,7 @@ const data = {
             challenge:
                 'First project using GraphQL, used both Apollo Client and Server. One problem I encounter was Apollo websocket is making the connection at build time therefore bearer token which should be captured upon login cannot be authenticated on backend middleware.',
             solution:
-                'Solution I found was to refresh the page upon login or reconnect the websocket link upon login. I choose the latter.',
+                'Solution I found was to refresh the page upon login or reconnect the websocket link upon login. I chose the latter.',
             technologies: [
                 'React',
                 'SASS/SCSS',
@@ -124,14 +124,14 @@ const data = {
             id: 2,
             name: 'Portfolio v1',
             description:
-                'Version 1 of my portfolio. Using Nextjs React framework. Includes TailwindCSS dark mode theme toggle, api routes for data fetching and form submission. Nodemailer to send emails to my personal email address. Deployed in Vercel.',
+                'Version 1 of my portfolio. Using Next.js React framework. Includes TailwindCSS dark mode theme toggle, api routes for data fetching and form submission. Nodemailer to send emails to my personal email address. Deployed in Vercel.',
             todos: ['Better styling', 'Better animation', 'Add more projects'],
             challenge:
                 'Some of the challenge was deployment on Vercel, encountered CORS error, invalid auth using gmail smtp and missing environment variables.',
             solution:
                 'Solution was to introduce a api cors middleware. Creating an app password for gmail account and adding envoronment variables via Vercel cli.',
             technologies: [
-                'Nextjs',
+                'Next.js',
                 'TailwindCSS',
                 'Nodemailer',
                 'React Hook Form',
@@ -147,17 +147,17 @@ const data = {
             id: 3,
             name: 'Amazon Clone',
             description:
-                'Features image carousel, product page, cart page and checkout steps along with paypal checkout. User login, registration and ability to view order history. A full stack Amazon clone MERN App using REST APIs. Created using React, TailwindCSS, Redux and Axios on frontend and Node, Express and MongoDB on the backend. Frontend deployed on Netlify and backend deployed on Heroku.',
+                'Features image carousel, product page, cart page and checkout steps along with paypal checkout. User login, registration and ability to view order history. A full stack Amazon clone MERN App using REST APIs. Created using React, TailwindCSS, Redux and Axios on frontend and Node, Express and MongoDB on the backend. Frontend deployed on Netlify and backend deployed on Firebase Functions.',
             todos: ['Ability to search', 'Admin dashboard', 'Stripe checkout'],
             challenge:
-                'Biggest challenge was deploying backend on heroku, found out that Mongoose lets you start using your models immediately, without waiting for mongoose to establish a connection to MongoDB',
+                'Initially the backend was deployed on Heroku, then I received feedback that the page is taking too long to load. Found out that since Heroku dyno is sleeping when there is no traffic it is taking too long to get back up.',
             solution:
-                'Solution I came up with is to have multiple connection for each model',
+                'Solution I came up with is to redeploy the backend on Firebase Functions.',
             technologies: [
                 'React',
                 'Redux',
                 'TailwindCSS',
-                'Nodejs',
+                'Firebase Functions',
                 'MongoDB',
             ],
             demo: 'https://trusting-banach-dba1ca.netlify.app/',
@@ -171,19 +171,13 @@ const data = {
             id: 4,
             name: 'Todo App',
             description:
-                'This project was a challenge from Frontend Mentor, it include ability to create, update, filter, delete todos. Has light and dark theme mode toggle. The first project I worked with Redux, Nodejs, Expressjs and MongoDB Atlas. Learned alot with this simple app.',
+                'This project was a challenge from Frontend Mentor, it include ability to create, update, filter, delete todos. Has light and dark theme mode toggle. The first project I worked with Redux, Node, Express and MongoDB Atlas. Learned alot with this simple app.',
             todos: ['Ability to sort todos via drag and drop'],
             challenge:
                 'Biggest challenge was implementing sort todos via drag and drop.',
             solution:
                 'Have not come up with a solution yet, but I am leaning towards React Beautiful D&D. Need to revist this project in the future.',
-            technologies: [
-                'React',
-                'Redux',
-                'CSS Modules',
-                'Nodejs',
-                'MongoDB',
-            ],
+            technologies: ['React', 'Redux', 'CSS Modules', 'Node', 'MongoDB'],
             demo: 'https://mern-todo-app-1f57a.web.app/',
             repo: 'https://github.com/ianbrdeguzman/mern-todo-app',
             image: {
@@ -247,10 +241,7 @@ const data = {
             name: 'Designo Client',
             description:
                 'A Frontend Mentor challenge. A multi-page fictitious client website. This was my first big project using Styled Components. Created using React, React Router, Styled Components and React Leaflet. Deployed to Firebase.',
-            todos: [
-                'Form submission API',
-                'Separate data file for each component',
-            ],
+            todos: ['Form submission API', 'Refactor data and styles'],
             challenge:
                 'Tried my best to style as close to the challenge as possible.',
             solution: 'Learned to adapt based on props.',
