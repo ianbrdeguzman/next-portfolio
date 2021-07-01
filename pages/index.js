@@ -39,7 +39,7 @@ const Home = ({ data: { about, experience, projects, contact } }) => {
     }, []);
 
     useEffect(() => {
-        ReactGA.initialize('G-W0VYPNTLK9');
+        ReactGA.initialize('UA-194832336-1');
         ReactGA.pageview(window.location.pathname);
     }, []);
 
