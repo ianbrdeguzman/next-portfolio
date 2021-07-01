@@ -4,10 +4,12 @@ import Layout from '../components/Layout';
 import { FormProvider } from '../components/context/formContext';
 import { ThemeProvider } from '../components/context/themeContext';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import NProgress from 'nprogress';
 import aos from 'aos';
 import 'aos/dist/aos.css';
+import { initGA, logPageView } from '../utils/analytics';
+
 NProgress.configure({ showSpinner: false });
 
 function MyApp({ Component, pageProps }) {
@@ -31,6 +33,26 @@ function MyApp({ Component, pageProps }) {
             router.events.off('routeChangeComplete', handleRouteChangeComplete);
         };
     }, []);
+
+    useEffect(() => {
+        if (typeof window === undefined) return;
+
+        const handleRouteChange = (url) => {
+            logPageView(url);
+        };
+
+        if (!window.GA_INITIALIZED) {
+            initGA();
+            window.GA_INITIALIZED = true;
+        }
+
+        router.events.on('routeChangeComplete', handleRouteChange);
+
+        return () => {
+            if (typeof window === undefined) return;
+            router.events.off('routeChangeComplete', handleRouteChange);
+        };
+    }, [router.events]);
 
     return (
         <ThemeProvider>

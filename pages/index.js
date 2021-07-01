@@ -6,7 +6,6 @@ import Project from '../components/Project';
 import axios from 'axios';
 import { Link as Scroll } from 'react-scroll';
 import { useEffect, useState } from 'react';
-import ReactGA from 'react-ga';
 
 export const getStaticProps = async () => {
     const { data } = await axios.get(
@@ -36,11 +35,6 @@ const Home = ({ data: { about, experience, projects, contact } }) => {
         return () => {
             window.removeEventListener('scroll', showScrollToTop);
         };
-    }, []);
-
-    useEffect(() => {
-        ReactGA.initialize('UA-194832336-1');
-        ReactGA.pageview(window.location.pathname);
     }, []);
 
     return (
