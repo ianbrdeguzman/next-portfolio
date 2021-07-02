@@ -7,7 +7,7 @@ import axios from 'axios';
 import { Link as Scroll } from 'react-scroll';
 import { useEffect, useState } from 'react';
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const { data } = await axios.get(
         'https://next-portfolio-indol-one.vercel.app/api/data'
     );
