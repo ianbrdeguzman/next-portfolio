@@ -3,15 +3,11 @@ import About from '../components/About';
 import Experience from '../components/Experience';
 import Contact from '../components/Contact';
 import Project from '../components/Project';
-import axios from 'axios';
 import { Link as Scroll } from 'react-scroll';
 import { useEffect, useState } from 'react';
+import { data } from './api/data';
 
-export const getServerSideProps = async () => {
-    const { data } = await axios.get(
-        'https://next-portfolio-indol-one.vercel.app/api/data'
-    );
-
+export const getStaticProps = async () => {
     return {
         props: {
             data,

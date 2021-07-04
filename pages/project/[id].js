@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useContext } from 'react';
 import { ThemeContext } from '../../components/context/themeContext';
 import { FiGithub } from 'react-icons/fi';
@@ -6,15 +5,11 @@ import { MdOpenInNew } from 'react-icons/md';
 import { HiOutlineBackspace } from 'react-icons/hi';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import { data } from '../api/data';
 
 export const getStaticPaths = async () => {
     try {
-        const {
-            data: { projects },
-        } = await axios.get(
-            'https://next-portfolio-indol-one.vercel.app/api/data'
-        );
-
+        const { projects } = data;
         const paths = projects.map((project) => {
             return {
                 params: { id: project.id.toString() },
@@ -34,11 +29,7 @@ export const getStaticProps = async (context) => {
     const id = context.params.id;
 
     try {
-        const {
-            data: { projects },
-        } = await axios.get(
-            'https://next-portfolio-indol-one.vercel.app/api/data'
-        );
+        const { projects } = data;
 
         const project = projects.filter((item) => item.id.toString() === id);
 
