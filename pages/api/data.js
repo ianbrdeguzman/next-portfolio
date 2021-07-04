@@ -1,4 +1,4 @@
-const data = {
+export const data = {
     about: {
         text: {
             one: 'Hi! My name is Ian De Guzman, Industrial Engineer who fell in love with programming, and has been in the I.T. industry since 2013. I am a self-taught, resilient, and hardworking developer who looks forward to collaborate and learn from engineers who are much smarter than me.',
