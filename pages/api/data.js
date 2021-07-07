@@ -1,7 +1,7 @@
 export const data = {
     about: {
         text: {
-            one: 'Hi! My name is Ian De Guzman, Industrial Engineer who fell in love with programming, and has been in the I.T. industry since 2013. I am a self-taught, resilient, and hardworking developer who looks forward to collaborate and learn from engineers who are much smarter than me.',
+            one: 'Hi! My name is Ian De Guzman, Industrial Engineer who fell in love with programming, and has been in the I.T. industry since 2013. I am a passionate, resilient, and hardworking developer who looks forward to collaborate and learn from engineers who are much smarter than me.',
             two: 'Originally from the Philippines, lived in Sydney, Australia and currently based in Toronto, Canada. Moved across the globe to chase opportunities and pursue my passion.',
         },
         education: [
