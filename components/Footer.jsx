@@ -13,7 +13,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                    href='https://www.linkedin.com/in/ian-benedict-de-guzman-377583139/'
+                    href='https://www.linkedin.com/in/ian-de-guzman-377583139/'
                     target='_blank'
                     className='mx-8 transform hover:scale-125 transition'
                 >
