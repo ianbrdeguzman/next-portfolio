@@ -2,13 +2,13 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const Custom404 = () => {
-    const router = useRouter();
+  const router = useRouter();
 
-    useEffect(() => {
-        router.push('/');
-    }, []);
+  useEffect(() => {
+    router.push('/');
+  }, [router]);
 
-    return <div class='min-h-lg dark:bg-gray-900'></div>;
+  return <div className="min-h-lg dark:bg-gray-900"></div>;
 };
 
 export default Custom404;
