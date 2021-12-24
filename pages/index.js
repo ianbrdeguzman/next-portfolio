@@ -5,14 +5,25 @@ import Contact from '../components/Contact';
 import Project from '../components/Project';
 import { Link as Scroll } from 'react-scroll';
 import { useEffect, useState } from 'react';
-import { data } from './api/data';
 
 export const getStaticProps = async () => {
-  return {
-    props: {
-      data
-    }
-  };
+  try {
+    const fs = require('fs').promises;
+    const path = require('path');
+
+    const rawData = await fs.readFile(
+      path.resolve(process.cwd(), 'lib/data.json')
+    );
+    const data = JSON.parse(rawData);
+
+    return {
+      props: {
+        data
+      }
+    };
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const Home = ({ data: { about, experience, projects, contact } }) => {
