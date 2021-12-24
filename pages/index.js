@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
     const path = require('path');
 
     const rawData = await fs.readFile(
-      path.resolve(process.cwd(), 'pages/api/data.json')
+      path.resolve(process.cwd(), 'lib/data.json')
     );
     const data = JSON.parse(rawData);
 

@@ -5,11 +5,18 @@ import { MdOpenInNew } from 'react-icons/md';
 import { HiOutlineBackspace } from 'react-icons/hi';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { data } from '../api/data';
 
 export const getStaticPaths = async () => {
   try {
+    const fs = require('fs').promises;
+    const path = require('path');
+
+    const rawData = await fs.readFile(
+      path.resolve(process.cwd(), 'lib/data.json')
+    );
+    const data = JSON.parse(rawData);
     const { projects } = data;
+
     const paths = projects.map((project) => {
       return {
         params: { id: project.id.toString() }
@@ -29,6 +36,13 @@ export const getStaticProps = async (context) => {
   const id = context.params.id;
 
   try {
+    const fs = require('fs').promises;
+    const path = require('path');
+
+    const rawData = await fs.readFile(
+      path.resolve(process.cwd(), 'lib/data.json')
+    );
+    const data = JSON.parse(rawData);
     const { projects } = data;
 
     const project = projects.filter((item) => item.id.toString() === id);
