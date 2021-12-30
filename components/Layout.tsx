@@ -3,8 +3,9 @@ import Header from './Header';
 import Footer from './Footer';
 import { useContext } from 'react';
 import { ThemeContext } from './context/themeContext';
+import { ILayoutProps } from '../lib/types';
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: ILayoutProps) => {
   const { theme } = useContext(ThemeContext);
 
   return (

@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 import Link from 'next/link';
 import { useTransition, animated } from 'react-spring';
+import { IExperienceProps } from '../lib/types';
 
-const Experience = ({ data: { enbridge, samsung, accenture } }) => {
-  const [selected, setSelected] = useState('e');
+const Experience = ({ enbridge, samsung, accenture }: IExperienceProps) => {
+  const [selected, setSelected] = useState('Enbridge');
 
   const transition = useTransition(selected, {
     from: { opacity: 0, x: 100 },
     enter: { opacity: 1, x: 0 },
     leave: { opacity: 0, x: 100 }
   });
+
+  const handleOnClick = (e: MouseEvent) => {
+    const current = e.currentTarget.textContent;
+    if (current) setSelected(current);
+  };
 
   return (
     <section
@@ -37,20 +43,19 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
           >
             <div
               className={`flex justify-center flex-1 ${
-                selected === 'e'
+                selected === 'Enbridge'
                   ? 'bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
                   : 'bg-gray-100 bg-opacity-10'
               }`}
             >
               <div className="flex-1 mb-0.5 md:mb-0 md:ml-0.5 bg-white dark:bg-gray-900 flex justify-center">
                 <button
-                  value="e"
                   className={`focus:outline-none py-4 flex-1 transition duration-300 max-h-[57px] ${
-                    selected === 'e'
+                    selected === 'Enbridge'
                       ? 'bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 font-semibold'
                       : 'border-b border-gray-100 border-opacity-10 md:border-l md:border-b-0'
                   }`}
-                  onClick={(e) => setSelected(e.target.value)}
+                  onClick={handleOnClick}
                 >
                   Enbridge
                 </button>
@@ -58,20 +63,19 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
             </div>
             <div
               className={`flex justify-center flex-1 ${
-                selected === 's'
+                selected === 'Samsung'
                   ? 'bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
                   : 'bg-gray-100 bg-opacity-10'
               }`}
             >
               <div className="flex-1 mb-0.5 md:mb-0 md:ml-0.5 bg-white dark:bg-gray-900 flex justify-center">
                 <button
-                  value="s"
                   className={`focus:outline-none py-4 flex-1 transition duration-300 max-h-[57px] ${
-                    selected === 's'
+                    selected === 'Samsung'
                       ? 'bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 font-semibold'
                       : 'border-b border-gray-100 border-opacity-10 md:border-l md:border-b-0'
                   }`}
-                  onClick={(e) => setSelected(e.target.value)}
+                  onClick={handleOnClick}
                 >
                   Samsung
                 </button>
@@ -79,20 +83,19 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
             </div>
             <div
               className={`flex justify-center flex-1 ${
-                selected === 'a'
+                selected === 'Accenture'
                   ? 'bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400'
                   : 'bg-gray-100 bg-opacity-10'
               }`}
             >
               <div className="flex-1 mb-0.5 md:mb-0 md:ml-0.5 bg-white dark:bg-gray-900 flex justify-center">
                 <button
-                  value="a"
                   className={`focus:outline-none py-4 flex-1 transition duration-300 max-h-[57px] ${
-                    selected === 'a'
+                    selected === 'Accenture'
                       ? 'bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400 font-semibold'
                       : 'border-b border-gray-100 border-opacity-10 md:border-l md:border-b-0'
                   }`}
-                  onClick={(e) => setSelected(e.target.value)}
+                  onClick={handleOnClick}
                 >
                   Accenture
                 </button>
@@ -104,7 +107,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
             data-aos="fade-left"
             data-aos-delay="400"
           >
-            {selected === 'e'
+            {selected === 'Enbridge'
               ? transition(
                   (style, item) =>
                     item && (
@@ -140,7 +143,7 @@ const Experience = ({ data: { enbridge, samsung, accenture } }) => {
                       </animated.article>
                     )
                 )
-              : selected === 's'
+              : selected === 'Samsung'
               ? transition(
                   (style, item) =>
                     item && (

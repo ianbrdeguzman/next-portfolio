@@ -1,10 +1,11 @@
 import { createTransport } from 'nodemailer';
 import Cors from 'cors';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-const initMiddleware = (middleware) => {
-  return (req, res) =>
+const initMiddleware = (middleware: any) => {
+  return (req: NextApiRequest, res: NextApiResponse) =>
     new Promise((resolve, reject) => {
-      middleware(req, res, (result) => {
+      middleware(req, res, (result: any) => {
         if (result instanceof Error) {
           return reject(result);
         }
@@ -19,7 +20,7 @@ const cors = initMiddleware(
   })
 );
 
-const submit = async (req, res) => {
+const submit = async (req: NextApiRequest, res: NextApiResponse) => {
   await cors(req, res);
 
   if (req.method === 'POST') {
