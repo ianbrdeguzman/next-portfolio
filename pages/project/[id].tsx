@@ -5,8 +5,10 @@ import { MdOpenInNew } from 'react-icons/md';
 import { HiOutlineBackspace } from 'react-icons/hi';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import { IProjectProps } from '../../lib/types';
+import { GetStaticProps, GetStaticPaths } from 'next';
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   try {
     const fs = require('fs').promises;
     const path = require('path');
@@ -17,7 +19,7 @@ export const getStaticPaths = async () => {
     const data = JSON.parse(rawData);
     const { projects } = data;
 
-    const paths = projects.map((project) => {
+    const paths = projects.map((project: IProjectProps) => {
       return {
         params: { id: project.id.toString() }
       };
@@ -29,11 +31,15 @@ export const getStaticPaths = async () => {
     };
   } catch (error) {
     console.log(error);
+    return {
+      paths: [],
+      fallback: false
+    };
   }
 };
 
-export const getStaticProps = async (context) => {
-  const id = context.params.id;
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id = context.params?.id;
 
   try {
     const fs = require('fs').promises;
@@ -45,18 +51,23 @@ export const getStaticProps = async (context) => {
     const data = JSON.parse(rawData);
     const { projects } = data;
 
-    const project = projects.filter((item) => item.id.toString() === id);
+    const project: IProjectProps = projects.find(
+      (item: IProjectProps) => item.id.toString() === id
+    );
 
     return {
-      props: { project: project }
+      props: project
     };
   } catch (error) {
     console.log(error);
+    return {
+      notFound: true
+    };
   }
 };
 
-const ProjectDetails = ({ project }) => {
-  const { theme } = useContext(ThemeContext);
+const ProjectDetails = (project: IProjectProps) => {
+  const state = useContext(ThemeContext);
   const router = useRouter();
 
   const {
@@ -69,10 +80,10 @@ const ProjectDetails = ({ project }) => {
     repo,
     demo,
     todos
-  } = project[0];
+  } = project;
 
   return (
-    <section className={theme === 'dark' ? 'dark' : ''}>
+    <section className={state?.theme === 'dark' ? 'dark' : ''}>
       <div className="flex justify-center items-center min-h-screen dark:bg-gray-900 dark:text-white font-thin">
         <div className="w-4/5 max-w-[900px]">
           <div

@@ -1,4 +1,10 @@
-const themeReducer = (state, action) => {
+import { ThemeActionType } from './themeAction';
+import { ThemeContextInterface } from './themeContext';
+
+const themeReducer = (
+  state: ThemeContextInterface,
+  action: ThemeActionType
+) => {
   switch (action.type) {
     case 'TOGGLE_THEME':
       return {

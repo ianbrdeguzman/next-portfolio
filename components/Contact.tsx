@@ -2,8 +2,9 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { FormContext } from './context/formContext';
 import { CgSpinner } from 'react-icons/cg';
+import { IContactProps } from '../lib/types';
 
-const Contact = ({ data: { text } }) => {
+const Contact = ({ text }: IContactProps) => {
   const { formSubmit, isLoading, success, error } = useContext(FormContext);
 
   const {
@@ -12,8 +13,8 @@ const Contact = ({ data: { text } }) => {
     formState: { errors }
   } = useForm();
 
-  const handleOnSubmit = (data) => {
-    formSubmit(data);
+  const handleOnSubmit = (data: any) => {
+    if (formSubmit) formSubmit(data);
   };
 
   return (
@@ -134,7 +135,7 @@ const Contact = ({ data: { text } }) => {
                     maxLength: 500
                   })}
                   id="message"
-                  rows="5"
+                  rows={5}
                   className="outline-none w-full bg-transparent focus:outline-none font-thin"
                 ></textarea>
               </label>
@@ -153,10 +154,12 @@ const Contact = ({ data: { text } }) => {
               )}
               <div
                 data-aos="fade-up"
-                type="submit"
                 className="my-4 p-0 inline-block text-xl rounded bg-gradient-to-r from-blue-500 via-purple-600 via-pink-500 to-red-400"
               >
-                <button className="text-xl font-thin m-0.5 rounded py-1 px-2 bg-white dark:bg-gray-900">
+                <button
+                  type="submit"
+                  className="text-xl font-thin m-0.5 rounded py-1 px-2 bg-white dark:bg-gray-900"
+                >
                   Send
                 </button>
               </div>

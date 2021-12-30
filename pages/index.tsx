@@ -5,8 +5,10 @@ import Contact from '../components/Contact';
 import Project from '../components/Project';
 import { Link as Scroll } from 'react-scroll';
 import { useEffect, useState } from 'react';
+import { GetStaticProps } from 'next';
+import { IAppProps } from '../lib/types';
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   try {
     const fs = require('fs').promises;
     const path = require('path');
@@ -15,18 +17,27 @@ export const getStaticProps = async () => {
       path.resolve(process.cwd(), 'lib/data.json')
     );
     const data = JSON.parse(rawData);
+    const { about, experience, projects, contact } = data;
 
     return {
       props: {
-        data
+        about,
+        experience,
+        projects,
+        contact
       }
     };
   } catch (error) {
     console.log(error);
+    return {
+      notFound: true
+    };
   }
 };
 
-const Home = ({ data: { about, experience, projects, contact } }) => {
+const Home = ({ about, experience, projects, contact }: IAppProps) => {
+  const { text, education, skills } = about;
+  const { enbridge, samsung, accenture } = experience;
   const [show, setShow] = useState(false);
 
   const showScrollToTop = () => {
@@ -59,10 +70,10 @@ const Home = ({ data: { about, experience, projects, contact } }) => {
         </Scroll>
       )}
       <Hero />
-      <About data={about} />
-      <Experience data={experience} />
-      <Project data={projects} />
-      <Contact data={contact} />
+      <About text={text} education={education} skills={skills} />
+      <Experience enbridge={enbridge} samsung={samsung} accenture={accenture} />
+      <Project projects={projects} />
+      <Contact text={contact.text} />
     </div>
   );
 };
