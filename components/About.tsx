@@ -1,10 +1,14 @@
 import { IAboutProps } from '../lib/types';
 
 const About = ({
-  text: { one, two },
-  education,
-  skills: { frontend, backend, styling, others }
-}: IAboutProps) => {
+  about: {
+    text: { one, two },
+    education,
+    skills: { frontend, backend, styling, others }
+  }
+}: {
+  about: IAboutProps;
+}) => {
   return (
     <section
       className="flex justify-center items-center min-h-screen"
