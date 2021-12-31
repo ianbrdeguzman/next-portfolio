@@ -1,6 +1,6 @@
 import { IAboutProps } from '../lib/types';
 
-const About = ({
+const AboutSection = ({
   about: {
     text: { one, two },
     education,
@@ -75,4 +75,4 @@ const About = ({
   );
 };
 
-export default About;
+export default AboutSection;

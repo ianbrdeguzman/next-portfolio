@@ -3,7 +3,7 @@ import { MdOpenInNew } from 'react-icons/md';
 import Link from 'next/link';
 import { IProjectProps } from '../lib/types';
 
-const Project = ({ projects }: { projects: IProjectProps[] }) => {
+const ProjectSection = ({ projects }: { projects: IProjectProps[] }) => {
   return (
     <section
       id="project"
@@ -82,4 +82,4 @@ const Project = ({ projects }: { projects: IProjectProps[] }) => {
   );
 };
 
-export default Project;
+export default ProjectSection;

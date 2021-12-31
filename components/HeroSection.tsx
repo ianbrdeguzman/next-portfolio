@@ -1,6 +1,6 @@
 import { Link as Scroll } from 'react-scroll';
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <section className="flex justify-center items-center min-h-sm">
       <div className="w-4/5 xs:text-2xl sm:text-3xl md:text-5xl font-thin">
@@ -38,4 +38,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
