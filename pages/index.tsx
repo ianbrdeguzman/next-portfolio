@@ -36,7 +36,6 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home = ({ about, experience, projects, contact }: IAppProps) => {
-  const { text, education, skills } = about;
   const [show, setShow] = useState(false);
 
   const showScrollToTop = () => {
@@ -69,10 +68,10 @@ const Home = ({ about, experience, projects, contact }: IAppProps) => {
         </Scroll>
       )}
       <Hero />
-      <About text={text} education={education} skills={skills} />
+      <About about={about} />
       <Experience experience={experience} />
       <Project projects={projects} />
-      <Contact text={contact.text} />
+      <Contact contact={contact} />
     </div>
   );
 };

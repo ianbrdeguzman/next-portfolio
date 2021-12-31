@@ -4,7 +4,7 @@ import { FormContext } from './context/formContext';
 import { CgSpinner } from 'react-icons/cg';
 import { IContactProps } from '../lib/types';
 
-const Contact = ({ text }: IContactProps) => {
+const Contact = ({ contact: { text } }: { contact: IContactProps }) => {
   const { formSubmit, isLoading, success, error } = useContext(FormContext);
 
   const {
