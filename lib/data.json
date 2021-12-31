@@ -22,8 +22,9 @@
       "others": ["GraphQL", "Apollo", "Netlify", "Heroku", "Git / Github"]
     }
   },
-  "experience": {
-    "enbridge": {
+  "experience": [
+    {
+      "id": 0,
       "name": "Enbridge",
       "role": "Service Desk Analyst",
       "city": "Toronto",
@@ -36,8 +37,9 @@
         "Develop, implement, and/or participate in the preparation knowledge base articles and/or documentation for Service Desk use; make recommendations for improvements."
       ]
     },
-    "samsung": {
-      "name": "Samsung Electronics",
+    {
+      "id": 1,
+      "name": "Samsung",
       "role": "Process Improvement Systems Analyst",
       "city": "Sydney",
       "country": "Australia",
@@ -49,7 +51,8 @@
         "Analyses business requirements and enhance systems that would benefit all parties."
       ]
     },
-    "accenture": {
+    {
+      "id": 2,
       "name": "Accenture",
       "role": "Senior Application Support Analyst",
       "city": "Manila",
@@ -62,7 +65,7 @@
         "Create documents and procedures for IT knowledge base."
       ]
     }
-  },
+  ],
   "projects": [
     {
       "id": 0,

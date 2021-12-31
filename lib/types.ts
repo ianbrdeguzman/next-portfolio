@@ -18,7 +18,14 @@ export interface IAboutProps {
   };
 }
 
-export interface IExperienceCompanyProps {
+export interface IExperienceButtonProps {
+  name: string;
+  selected: string;
+  onClick: (e: React.MouseEvent<Element, MouseEvent>) => void;
+}
+
+export interface IExperienceCardProps {
+  selected: string;
   name: string;
   role: string;
   city: string;
@@ -29,9 +36,13 @@ export interface IExperienceCompanyProps {
 }
 
 export interface IExperienceProps {
-  enbridge: IExperienceCompanyProps;
-  samsung: IExperienceCompanyProps;
-  accenture: IExperienceCompanyProps;
+  name: string;
+  role: string;
+  city: string;
+  country: string;
+  fromDate: string;
+  toDate: string;
+  task: string[];
 }
 
 export interface IProjectProps {
@@ -56,7 +67,7 @@ export interface IContactProps {
 
 export interface IAppProps {
   about: IAboutProps;
-  experience: IExperienceProps;
+  experience: IExperienceProps[];
   projects: IProjectProps[];
   contact: IContactProps;
 }

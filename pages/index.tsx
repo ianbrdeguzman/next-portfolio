@@ -37,7 +37,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home = ({ about, experience, projects, contact }: IAppProps) => {
   const { text, education, skills } = about;
-  const { enbridge, samsung, accenture } = experience;
   const [show, setShow] = useState(false);
 
   const showScrollToTop = () => {
@@ -71,7 +70,7 @@ const Home = ({ about, experience, projects, contact }: IAppProps) => {
       )}
       <Hero />
       <About text={text} education={education} skills={skills} />
-      <Experience enbridge={enbridge} samsung={samsung} accenture={accenture} />
+      <Experience experience={experience} />
       <Project projects={projects} />
       <Contact text={contact.text} />
     </div>
