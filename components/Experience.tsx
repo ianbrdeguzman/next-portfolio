@@ -48,7 +48,13 @@ const Experience = ({ enbridge, samsung, accenture }: IExperienceProps) => {
                   : 'bg-gray-100 bg-opacity-10'
               }`}
             >
-              <div className="flex-1 mb-0.5 md:mb-0 md:ml-0.5 bg-white dark:bg-gray-900 flex justify-center">
+              <div
+                className={`flex-1 mb-0.5 md:mb-0 md:ml-0.5 flex justify-center ${
+                  selected === 'Enbridge'
+                    ? 'bg-gray-100 dark:bg-gray-800'
+                    : 'bg-white dark:bg-gray-900'
+                }`}
+              >
                 <button
                   className={`focus:outline-none py-4 flex-1 transition duration-300 max-h-[57px] ${
                     selected === 'Enbridge'
@@ -68,7 +74,13 @@ const Experience = ({ enbridge, samsung, accenture }: IExperienceProps) => {
                   : 'bg-gray-100 bg-opacity-10'
               }`}
             >
-              <div className="flex-1 mb-0.5 md:mb-0 md:ml-0.5 bg-white dark:bg-gray-900 flex justify-center">
+              <div
+                className={`flex-1 mb-0.5 md:mb-0 md:ml-0.5 dark:bg-gray-900 flex justify-center ${
+                  selected === 'Samsung'
+                    ? 'bg-gray-100 dark:bg-gray-800'
+                    : 'bg-white dark:bg-gray-900'
+                }`}
+              >
                 <button
                   className={`focus:outline-none py-4 flex-1 transition duration-300 max-h-[57px] ${
                     selected === 'Samsung'
@@ -88,7 +100,13 @@ const Experience = ({ enbridge, samsung, accenture }: IExperienceProps) => {
                   : 'bg-gray-100 bg-opacity-10'
               }`}
             >
-              <div className="flex-1 mb-0.5 md:mb-0 md:ml-0.5 bg-white dark:bg-gray-900 flex justify-center">
+              <div
+                className={`flex-1 mb-0.5 md:mb-0 md:ml-0.5 dark:bg-gray-900 flex justify-center ${
+                  selected === 'Accenture'
+                    ? 'bg-gray-100 dark:bg-gray-800'
+                    : 'bg-white dark:bg-gray-900'
+                }`}
+              >
                 <button
                   className={`focus:outline-none py-4 flex-1 transition duration-300 max-h-[57px] ${
                     selected === 'Accenture'
