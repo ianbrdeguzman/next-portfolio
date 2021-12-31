@@ -4,7 +4,7 @@ import { FormContext } from './context/formContext';
 import { CgSpinner } from 'react-icons/cg';
 import { IContactProps } from '../lib/types';
 
-const Contact = ({ contact: { text } }: { contact: IContactProps }) => {
+const ContactSection = ({ contact: { text } }: { contact: IContactProps }) => {
   const { formSubmit, isLoading, success, error } = useContext(FormContext);
 
   const {
@@ -171,4 +171,4 @@ const Contact = ({ contact: { text } }: { contact: IContactProps }) => {
   );
 };
 
-export default Contact;
+export default ContactSection;

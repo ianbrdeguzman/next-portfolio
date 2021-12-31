@@ -1,8 +1,8 @@
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Experience from '../components/Experience';
-import Contact from '../components/Contact';
-import Project from '../components/Project';
+import HeroSection from '../components/HeroSection';
+import AboutSection from '../components/AboutSection';
+import ExperienceSection from '../components/ExperienceSection';
+import ProjectSection from '../components/ProjectSection';
+import ContactSection from '../components/ContactSection';
 import { Link as Scroll } from 'react-scroll';
 import { useEffect, useState } from 'react';
 import { GetStaticProps } from 'next';
@@ -67,11 +67,11 @@ const Home = ({ about, experience, projects, contact }: IAppProps) => {
           </button>
         </Scroll>
       )}
-      <Hero />
-      <About about={about} />
-      <Experience experience={experience} />
-      <Project projects={projects} />
-      <Contact contact={contact} />
+      <HeroSection />
+      <AboutSection about={about} />
+      <ExperienceSection experience={experience} />
+      <ProjectSection projects={projects} />
+      <ContactSection contact={contact} />
     </div>
   );
 };

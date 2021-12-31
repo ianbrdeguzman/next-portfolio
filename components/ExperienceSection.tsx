@@ -3,7 +3,11 @@ import { IExperienceProps } from '../lib/types';
 import ExperienceButton from './ExperienceButton';
 import ExperienceCard from './ExperienceCard';
 
-const Experience = ({ experience }: { experience: IExperienceProps[] }) => {
+const ExperienceSection = ({
+  experience
+}: {
+  experience: IExperienceProps[];
+}) => {
   const companies = experience.map((exp) => exp.name);
   const [selected, setSelected] = useState('Enbridge');
 
@@ -64,4 +68,4 @@ const Experience = ({ experience }: { experience: IExperienceProps[] }) => {
   );
 };
 
-export default Experience;
+export default ExperienceSection;
