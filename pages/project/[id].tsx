@@ -67,7 +67,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const ProjectDetails = (project: IProjectProps) => {
-  const state = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const router = useRouter();
 
   const {
@@ -83,7 +83,7 @@ const ProjectDetails = (project: IProjectProps) => {
   } = project;
 
   return (
-    <section className={state?.theme === 'dark' ? 'dark' : ''}>
+    <section className={theme === 'dark' ? 'dark' : ''}>
       <div className="flex justify-center items-center min-h-screen dark:bg-gray-900 dark:text-white font-thin">
         <div className="w-4/5 max-w-[900px]">
           <div
@@ -101,22 +101,22 @@ const ProjectDetails = (project: IProjectProps) => {
               >
                 <a href={demo}>{name}</a>
               </h1>
-              <div data-aos="fade-left" className="flex mt-4">
+              <div data-aos="fade-left" className="flex mt-6">
                 <a
                   href={repo}
                   target="_blank"
                   rel="noreferrer"
-                  className="mr-4 text-white transform hover:scale-125 transition text-2xl"
+                  className="mr-4 text-white transform hover:scale-125 transition md:text-2xl"
                 >
-                  <FiGithub />
+                  <FiGithub color={theme === 'dark' ? '#fff' : '#000'} />
                 </a>
                 <a
                   href={demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-white transform hover:scale-125 transition text-2xl"
+                  className="text-white transform hover:scale-125 transition md:text-2xl"
                 >
-                  <MdOpenInNew />
+                  <MdOpenInNew color={theme === 'dark' ? '#fff' : '#000'} />
                 </a>
               </div>
             </div>
