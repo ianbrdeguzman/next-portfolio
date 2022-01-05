@@ -61,6 +61,10 @@ export interface IProjectProps {
   };
 }
 
+export interface IProjectCardProps extends IProjectProps {
+  delay: string;
+}
+
 export interface IContactProps {
   text: string;
 }
