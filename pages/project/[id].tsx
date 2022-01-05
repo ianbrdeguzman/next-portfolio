@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../components/context/themeContext';
 import { FiGithub } from 'react-icons/fi';
 import { MdOpenInNew } from 'react-icons/md';
-import { HiOutlineBackspace } from 'react-icons/hi';
+import { IoMdArrowBack } from 'react-icons/io';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { IProjectProps } from '../../lib/types';
@@ -91,7 +91,7 @@ const ProjectDetails = (project: IProjectProps) => {
             onClick={() => router.push(`/#project`)}
             className="fixed top-4 left-4 cursor-pointer text-2xl"
           >
-            <HiOutlineBackspace />
+            <IoMdArrowBack />
           </div>
           <header className="my-4">
             <div className="flex justify-between items-center">
