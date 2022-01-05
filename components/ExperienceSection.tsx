@@ -8,7 +8,6 @@ const ExperienceSection = ({
 }: {
   experience: IExperienceProps[];
 }) => {
-  const companies = experience.map((exp) => exp.name);
   const [selected, setSelected] = useState('Enbridge');
 
   const handleOnClick = (e: MouseEvent) => {
@@ -40,16 +39,18 @@ const ExperienceSection = ({
             data-aos-delay="200"
             className="flex justify-around text-gray-500 md:flex-col md:mr-4 min-w-[120px] self-start"
           >
-            {companies.map((exp) => {
-              return (
-                <ExperienceButton
-                  key={exp}
-                  name={exp}
-                  selected={selected}
-                  onClick={handleOnClick}
-                />
-              );
-            })}
+            {experience
+              .map((exp) => exp.name)
+              .map((company) => {
+                return (
+                  <ExperienceButton
+                    key={company}
+                    name={company}
+                    selected={selected}
+                    onClick={handleOnClick}
+                  />
+                );
+              })}
           </div>
           <div
             className="xs:mt-4 md:mt-0 flex-1 relative h-[440px]"
