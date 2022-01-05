@@ -36,11 +36,8 @@ const ContactSection = ({ contact: { text } }: { contact: IContactProps }) => {
           </h1>
         </header>
         {isLoading ? (
-          <div
-            data-aos="fade"
-            className="flex justify-center animate-spin mt-40"
-          >
-            <CgSpinner size={32} />
+          <div data-aos="fade" className="flex justify-center mt-40">
+            <CgSpinner size={32} className="animate-spin" />
           </div>
         ) : success ? (
           <div>
