@@ -17,7 +17,7 @@ const ProjectCard = ({
       data-aos="fade-up"
       data-aos-delay={delay}
       key={id}
-      className="rounded min-h-[300px] flex flex-col border p-4 group"
+      className="rounded min-h-[300px] flex flex-col border p-4 group hover:bg-gray-100 dark:hover:bg-gray-800"
     >
       <header className="flex justify-end">
         <Link href={repo}>
