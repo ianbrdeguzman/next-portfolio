@@ -43,6 +43,7 @@ const FormProvider = ({ children }: { children: ReactNode }) => {
         }
       );
       dispatch(formSubmitSuccess(data.message));
+      window.localStorage.setItem('sent', 'true');
     } catch (error) {
       let message: string;
       if (error instanceof Error) {
