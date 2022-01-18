@@ -145,7 +145,15 @@ const ProjectDetails = (project: IProjectProps) => {
             </ul>
           </header>
           <div data-aos="fade" className="relative mb-4">
-            <Image src={desktop} alt={name} width={900} height={520} priority />
+            <Image
+              src={desktop}
+              alt={name}
+              width={900}
+              height={520}
+              priority
+              blurDataURL={desktop}
+              placeholder="blur"
+            />
             <div className="absolute bottom-0 right-0 xs:max-w-[70px] sm:max-w-[80px] md:max-w-[150px] lg:max-w-[200px]">
               <Image
                 src={mobile}
@@ -153,6 +161,8 @@ const ProjectDetails = (project: IProjectProps) => {
                 width={200}
                 height={400}
                 priority
+                blurDataURL={mobile}
+                placeholder="blur"
               />
             </div>
           </div>
