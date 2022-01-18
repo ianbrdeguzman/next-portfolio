@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FormContext, IForm } from './context/formContext';
 import { CgSpinner } from 'react-icons/cg';
@@ -6,6 +6,7 @@ import { IContactProps } from '../lib/types';
 
 const ContactSection = ({ contact: { text } }: { contact: IContactProps }) => {
   const { formSubmit, isLoading, success, error } = useContext(FormContext);
+  const [messageSent, setMessageSent] = useState<boolean>(false);
 
   const {
     register,
@@ -16,6 +17,12 @@ const ContactSection = ({ contact: { text } }: { contact: IContactProps }) => {
   const handleOnSubmit = (data: IForm) => {
     if (formSubmit) formSubmit(data);
   };
+
+  useEffect(() => {
+    if (window.localStorage.getItem('sent')) {
+      setMessageSent(true);
+    }
+  }, []);
 
   return (
     <section
@@ -39,10 +46,11 @@ const ContactSection = ({ contact: { text } }: { contact: IContactProps }) => {
           <div data-aos="fade" className="flex justify-center mt-40">
             <CgSpinner size={32} className="animate-spin" />
           </div>
-        ) : success ? (
+        ) : success || messageSent ? (
           <div>
             <h3 data-aos="fade-up" className="md:text-xl">
-              {success}
+              {success ||
+                "Thank you for reaching out. I'll try my best to get back to you as soon as I can.🎉"}
             </h3>
           </div>
         ) : (
@@ -142,7 +150,6 @@ const ContactSection = ({ contact: { text } }: { contact: IContactProps }) => {
                 </p>
               )}
             </div>
-
             <div className="text-right">
               {error && (
                 <div className="text-red-500">
