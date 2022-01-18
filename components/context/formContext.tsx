@@ -7,7 +7,7 @@ import {
   formSubmitSuccess
 } from './formAction';
 
-interface IForm {
+export interface IForm {
   name: string;
   email: string;
   message: string;

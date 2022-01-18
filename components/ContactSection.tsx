@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { FormContext } from './context/formContext';
+import { FormContext, IForm } from './context/formContext';
 import { CgSpinner } from 'react-icons/cg';
 import { IContactProps } from '../lib/types';
 
@@ -13,7 +13,7 @@ const ContactSection = ({ contact: { text } }: { contact: IContactProps }) => {
     formState: { errors }
   } = useForm();
 
-  const handleOnSubmit = (data: any) => {
+  const handleOnSubmit = (data: IForm) => {
     if (formSubmit) formSubmit(data);
   };
 
